@@ -1,0 +1,642 @@
+{% extends "layout.html" %}
+
+{% block title %}Accueil du projet Mozilla — Mozilla :p {% endblock %}
+
+{% block style %}
+
+    <link rel="stylesheet" media="screen,projection,tv" href="css/tabzilla-min.css">
+
+    <!--[if lte IE 8]>
+    <script src="//mozorg.cdn.mozilla.net/media/js/libs/html5shiv.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" media="screen,projection,tv" href="css/responsive-min.css">
+    <link rel="stylesheet" media="screen,projection,tv" href="css/home2.css">
+    <link rel="stylesheet" media="screen,projection,tv" href="css/home-min.css">
+<!--[if IE 9]>
+  <link rel="stylesheet" media="screen,projection,tv" href="//mozorg.cdn.mozilla.net/media/css/home-ie9-min.css?build=c6d3fcc" />
+<![endif]-->
+<!--[if IE 8]>
+  <link rel="stylesheet" media="screen,projection,tv" href="//mozorg.cdn.mozilla.net/media/css/home-ie8-min.css?build=c6d3fcc" />
+<![endif]-->
+<!--[if lt IE 8]>
+  <link rel="stylesheet" media="screen,projection,tv" href="//mozorg.cdn.mozilla.net/media/css/home-ie-min.css?build=c6d3fcc" />
+<![endif]-->
+
+{% endblock %}
+
+{% block javascript %}
+    <script id="undefined" src="js/inpage_linkid.js" async="" type="text/javascript"></script>
+    <script src="js/ga.js" async="" type="text/javascript"></script>
+    <script src="js/site-min.js"></script>
+
+    <script>
+		var _gaq = _gaq || [];
+		var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+		_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+		_gaq.push(['_setAccount', 'UA-36116321-1']);
+		_gaq.push(['_setAllowLinker', true]);
+		_gaq.push(['_setAllowAnchor', true]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		    var ga = document.createElement('script');
+		    ga.type = 'text/javascript';
+		    ga.async = true;
+
+		    var prefix = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www');
+		    ga.src = prefix + '.google-analytics.com/ga.js';
+
+		    var s = document.getElementsByTagName('script')[0];
+		    s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+{% endblock %}
+</head>
+
+<body id="home" class="html-ltr sand lang-fr wide">
+	<div id="tabzilla-panel" class="tabzilla-closed" tabindex="-1">
+		<div id="tabzilla-contents">
+			<div id="tabzilla-promo">
+				<div class="snippet" id="tabzilla-promo-donate-201312">
+					<a href="https://sendto.mozilla.org/page/contribute/EOYFR2013-webFR?icn=tabz&amp;source=tabzilla_image&amp;amount=20">
+					<h4>Aidez Mozilla</h4>
+					<span class="button">Faire un don</span>
+					</a>
+				</div>
+			</div>
+			<div id="tabzilla-nav">
+				<ul>
+					<li>
+					<h2>Mozilla</h2>
+					<div>
+						<ul>
+							<li>
+							<a href="https://www.mozilla.org/mission/?icn=tabz">Mission</a>
+							</li>
+							<li>
+							<a href="https://www.mozilla.org/about/?icn=tabz">À propos</a>
+							</li>
+							<li>
+							<a href="https://www.mozilla.org/projects/?icn=tabz">Projets</a></li>
+							<li><a href="https://support.mozilla.org/?icn=tabz">Assistance</a></li>
+							<li><a href="https://developer.mozilla.org/?icn=tabz">Réseau développeurs</a></li>
+						</ul>
+					</div>
+					</li>
+					<li>
+					<h2>Logiciels</h2>
+					<div>
+						<ul>
+							<li><a href="https://www.mozilla.org/firefox/?icn=tabz">Firefox</a></li>
+							<li><a href="https://www.mozilla.org/thunderbird/?icn=tabz">Thunderbird</a></li>
+							<li><a href="https://www.mozilla.org/firefox/os/?icn=tabz">Firefox OS</a></li>
+						</ul>
+					</div>
+					</li>
+					<li>
+					<h2>Innovations</h2>
+					<div>
+						<ul>
+							<li><a href="https://webfwd.org/?icn=tabz">WebFWD</a></li>
+							<li><a href="https://mozillalabs.com/?icn=tabz">Labs</a></li>
+							<li><a href="https://webmaker.org/?icn=tabz">Webmaker</a></li>
+							<li><a href="https://www.mozilla.org/research/?icn=tabz">Research</a></li>
+						</ul>
+					</div>
+					</li>
+					<li>
+					<h2>Participer</h2>
+					<div>
+						<ul>
+							<li><a href="https://www.mozilla.org/contribute/?icn=tabz">Contribuer</a></li>
+							<li><a href="https://www.mozilla.org/en-US/about/careers.html?icn=tabz">Carrières</a></li>
+							<li><a href="https://www.mozilla.org/en-US/about/mozilla-spaces/?icn=tabz">Nous trouver</a></li>
+							<li><a href="https://sendto.mozilla.org/page/contribute/EOYFR2013-webFR?icn=tabz&amp;source=tabzilla_donate&amp;amount=20" class="donate">Faire un don</a></li>
+							<li><a href="https://www.mozilla.org/about/partnerships/?icn=tabz">Partenariats</a></li>
+						</ul>
+					</div>
+					</li>
+					<li id="tabzilla-search"><a href="https://www.mozilla.org/community/directory.html?icn=tabz">Annuaire des sites web</a>
+					<form title="Rechercher des sites Mozilla" role="search" action="https://www.google.com/cse">
+						<input value="002443141534113389537:ysdmevkkknw" name="cx" type="hidden"><input value="FORID:0" name="cof" type="hidden"><label for="q">Rechercher</label><input placeholder="Rechercher" id="q" name="q" type="search">
+					</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="strings" data-global-close="Fermer" data-news-next="Article suivant" data-news-prev="Article précédent">
+	</div>
+	<div id="outer-wrapper">
+		<div id="wrapper">
+			<header id="masthead">
+				<a aria-label="Liens Mozilla" href="http://www.mozilla.org/fr/" id="tabzilla">Mozilla</a>
+				<span class="toggle" role="button" aria-controls="nav-main-menu" tabindex="0">Menu</span>
+				<nav id="nav-main" role="navigation">
+					<ul id="nav-main-menu">
+						<li class="first mission-item"><a href="#">Blog</a></li>
+            <li class="first mission-item"><a href="#">Contribuer</a></li>
+            <li class="first mission-item"><a href="#">Ressources</a></li>
+            <li class="first mission-item"><a href="#">Nous-rejoindre</a></li>
+						<li class="about-item"><a href="#">À propos</a></li>
+						<li class="contribute-item"><a href="#">Contactez-nous</a></li>
+
+					</ul>
+				</nav>
+			</header>
+			<main id="main-content" role="main">
+				<header class="mission">
+					<img id="logo" src="img/logo.png">
+					<h1>
+						<img class="mz" src="img/mozilla-wordmark-red.png" data-src="//mozorg.cdn.mozilla.net/media/img/home/mozilla-wordmark-red.png" data-high-res="true" alt="Mozilla" height="70" width="258">
+						Tunisia
+					</h1>
+					<p class="tagline">
+						Un Web plus juste, c'est dans nos co{r}des
+					</p>
+					<p class="engage">
+						<a href="http://www.mozilla.org/fr/contribute/" class="button go">Contribuer</a>
+					</p>
+				</header>
+				<section class="pillars">
+					<ul class="accordion">
+						<li id="panel-blog" class="panel" tabindex="0">
+						<h2 class="panel-title"><i>Visitez</i> notre blog</h2>
+						<div class="panel-inner">
+							<div class="panel-content">
+								<a href="http://mozilla-tunisia.org/category/article/">
+								<h3>Suivez les derniers news</h3>
+								<p>
+									Restez branchés en suivant les dernères nouvelles de notre communauté et de Mozilla.
+								</p>
+								<p class="go">
+									Visitez notre blog
+								</p>
+								</a>
+							</div>
+						</div>
+						</li>
+						<li id="panel-kernel" class="panel" tabindex="0">
+						<h2 class="panel-title"><i>Rejoignez</i> Mozilla Tunisia</h2>
+						<div class="panel-inner">
+							<div class="panel-content">
+								<a href="https://blog.mozilla.org/blog/2013/11/12/live-what-you-love-mozilla-firefox-the-vans-triple-crown-of-surfing" hreflang="en-US">
+								<div class="angle">
+									<div class="content">
+										<h3>Rejoignez notre communauté</h3>
+										<p>
+                      Vous êtes fans du Web et vous voulez contribuer aux projets Mozilla ? Rejoignez l'équipe des contributeurs tunisiens.
+										</p>
+										<p class="go">
+											En savoir plus
+										</p>
+									</div>
+								</div>
+								</a>
+							</div>
+						</div>
+						</li>
+						<li id="panel-fxos" class="panel" tabindex="0">
+						<h2 class="panel-title"><i>Découvrez </i><br> Firefox OS</h2>
+						<div class="panel-inner">
+							<div class="panel-content">
+								<a href="https://developer.mozilla.org/">
+								<h3>Découvrez FirefoxOS</h3>
+								<p>
+									Nous vous proposons de la documentation, des démos, des outils, des tutoriels et plein d'autres choses liées au nouveau système d'exploitation mobile de Mozilla.
+								</p>
+								<p class="go">
+									Savoir plus
+								</p>
+								</a>
+							</div>
+						</div>
+						</li>
+						<li id="panel-donate" class="panel" tabindex="0">
+						<h2 class="panel-title"><i>Notre</i> Mission</h2>
+						<div class="panel-inner">
+							<div class="panel-content">
+								<h3>Mozilla : La mission</h3>
+								<p>
+                  Il s'agit d'apprendre, de collaborer et de partager vos compétences avec une communauté mondiale de Mozilliens - développeurs, des organisateurs, des militants et plus
+								</p>
+                <p class="go">
+                  Savoir plus sur la mission de Mozilla
+                </p>
+							</div>
+						</div>
+						</li>
+					</ul>
+				</section>
+				<section id="firefox-promo" class="billboard">
+				<div class="container">
+					<a href="http://www.mozilla.org/fr/firefox/" id="firefox-promo-link">
+					<h3>
+					<img class="" src="img/firefox-sm.png" data-high-res="true" alt="" height="100" width="280">
+
+						Engagé pour vous, votre vie privée et un web ouvert </h3>
+					</a>
+					<div id="download-button-desktop-release" class="download-button download-button-small download-button-noicon">
+
+						<ul role="presentation" class="download-list">
+
+							<li class="os_linux">
+								<a class="download-link" href="https://www.mozilla.org/fr/firefox/channel/" data-direct-link="https://download.mozilla.org/?product=firefox-26.0&amp;os=linux&amp;lang=fr">
+									<span class="download-content">
+										<!-- <strong class="download-title">Firefox</strong> -->
+										<span class="download-subtitle">Téléchargement gratuit</span>
+										<!--<span class="download-lang">Français</span>
+										<span class="download-platform">Linux</span>-->
+									</span>
+								</a>
+							</li>
+
+						</ul>
+
+					</div>
+				</div>
+				</section>
+				<section class="extra">
+				<div class="container small">
+					<aside class="billboard newsletter-form">
+					<form id="footer-email-form" method="post" action="https://lists.mozilla.org/subscribe/community-tunisia">
+						<h1>Recevoir des informations sur notre mailing list</h1>
+						<div class="form-contents">
+							<div class="field field-email">
+								<label for="id_email" class="hidden">Adresse électronique</label>
+								<input name="email" id="id_email" required="" aria-required="true" placeholder="VOTRE ADRESSE ÉLECTRONIQUE ICI" type="email">
+							</div>
+							<div id="form-details">
+								<!-- This is bad, but a quick fix because we are pushing live in an hour -->
+								<!-- <div class="field field-country">
+									<label for="country" class="hidden">Country</label>
+									<select id="country" name="country">
+										<option value=""></option>
+										<option value="AF">Afghanistan</option>
+										<option value="AL">Albania</option>
+										<option value="DZ">Algeria</option>
+										<option value="AS">American Samoa</option>
+										<option value="AD">Andorra</option>
+										<option value="AO">Angola</option>
+										<option value="AI">Anguilla</option>
+										<option value="AG">Antigua and Barbuda</option>
+										<option value="AR">Argentina</option>
+										<option value="AM">Armenia</option>
+										<option value="AW">Aruba</option>
+										<option value="AU">Australia</option>
+										<option value="AT">Austria</option>
+										<option value="AZ">Azerbaijan</option>
+										<option value="BS">Bahamas</option>
+										<option value="BH">Bahrain</option>
+										<option value="BD">Bangladesh</option>
+										<option value="BB">Barbados</option>
+										<option value="BY">Belarus</option>
+										<option value="BE">Belgium</option>
+										<option value="BZ">Belize</option>
+										<option value="BJ">Benin</option>
+										<option value="BM">Bermuda</option>
+										<option value="BT">Bhutan</option>
+										<option value="BO">Bolivia</option>
+										<option value="BA">Bosnia and Herzegovina</option>
+										<option value="BW">Botswana</option>
+										<option value="BR">Brazil</option>
+										<option value="VG">British Virgin Islands</option>
+										<option value="IO">British Indian Ocean Territory</option>
+										<option value="BN">Brunei</option>
+										<option value="BG">Bulgaria</option>
+										<option value="BF">Burkina Faso</option>
+										<option value="BI">Burundi</option>
+										<option value="KH">Cambodia</option>
+										<option value="CM">Cameroon</option>
+										<option value="CA">Canada</option>
+										<option value="CV">Cape Verde</option>
+										<option value="KY">Cayman Islands</option>
+										<option value="CF">Central African Republic</option>
+										<option value="TD">Chad</option>
+										<option value="CL">Chile</option>
+										<option value="CN">China</option>
+										<option value="CX">Christmas Island</option>
+										<option value="CO">Colombia</option>
+										<option value="KM">Comoros Islands</option>
+										<option value="CD">Congo, Democratic Republic of the</option>
+										<option value="CG">Congo, Republic of the</option>
+										<option value="CK">Cook Islands</option>
+										<option value="CR">Costa Rica</option>
+										<option value="CI">Cote D'ivoire</option>
+										<option value="HR">Croatia</option>
+										<option value="CU">Cuba</option>
+										<option value="CY">Cyprus</option>
+										<option value="CZ">Czech Republic</option>
+										<option value="DK">Denmark</option>
+										<option value="DJ">Djibouti</option>
+										<option value="DM">Dominica</option>
+										<option value="DO">Dominican Republic</option>
+										<option value="TP">East Timor</option>
+										<option value="EC">Ecuador</option>
+										<option value="EG">Egypt</option>
+										<option value="SV">El Salvador</option>
+										<option value="GQ">Equatorial Guinea</option>
+										<option value="ER">Eritrea</option>
+										<option value="EE">Estonia</option>
+										<option value="ET">Ethiopia</option>
+										<option value="FK">Falkland Islands (Malvinas)</option>
+										<option value="FO">Faroe Islands</option>
+										<option value="FJ">Fiji</option>
+										<option value="FI">Finland</option>
+										<option value="FR">France</option>
+										<option value="GF">French Guiana</option>
+										<option value="PF">French Polynesia</option>
+										<option value="TF">French Southern Territories</option>
+										<option value="GA">Gabon</option>
+										<option value="GM">Gambia</option>
+										<option value="GE">Georgia</option>
+										<option value="DE">Germany</option>
+										<option value="GH">Ghana</option>
+										<option value="GI">Gibraltar</option>
+										<option value="GR">Greece</option>
+										<option value="GL">Greenland</option>
+										<option value="GD">Grenada</option>
+										<option value="GP">Guadeloupe</option>
+										<option value="GU">Guam</option>
+										<option value="GT">Guatemala</option>
+										<option value="GN">Guinea</option>
+										<option value="GW">Guinea-Bissau</option>
+										<option value="GY">Guyana</option>
+										<option value="HT">Haiti</option>
+										<option value="VA">Holy See (Vatican City State)</option>
+										<option value="HN">Honduras</option>
+										<option value="HK">Hong Kong</option>
+										<option value="HU">Hungary</option>
+										<option value="IS">Iceland</option>
+										<option value="IN">India</option>
+										<option value="ID">Indonesia</option>
+										<option value="IR">Iran</option>
+										<option value="IQ">Iraq</option>
+										<option value="IE">Ireland</option>
+										<option value="IL">Israel</option>
+										<option value="IT">Italy</option>
+										<option value="JM">Jamaica</option>
+										<option value="JP">Japan</option>
+										<option value="JO">Jordan</option>
+										<option value="KZ">Kazakhstan</option>
+										<option value="KE">Kenya</option>
+										<option value="KI">Kiribati</option>
+										<option value="KR">South Korea</option>
+										<option value="XK">Kosovo</option>
+										<option value="KW">Kuwait</option>
+										<option value="KG">Kyrgyzstan</option>
+										<option value="LA">Laos</option>
+										<option value="LV">Latvia</option>
+										<option value="LB">Lebanon</option>
+										<option value="LS">Lesotho</option>
+										<option value="LR">Liberia</option>
+										<option value="LI">Liechtenstein</option>
+										<option value="LT">Lithuania</option>
+										<option value="LU">Luxembourg</option>
+										<option value="MO">Macau</option>
+										<option value="MK">Macedonia</option>
+										<option value="MG">Madagascar</option>
+										<option value="MW">Malawi</option>
+										<option value="MY">Malaysia</option>
+										<option value="MV">Maldives</option>
+										<option value="ML">Mali</option>
+										<option value="MT">Malta</option>
+										<option value="MH">Marshall Islands</option>
+										<option value="MQ">Martinique</option>
+										<option value="MR">Mauritania</option>
+										<option value="MU">Mauritius</option>
+										<option value="YT">Mayotte</option>
+										<option value="MX">Mexico</option>
+										<option value="FM">Micronesia</option>
+										<option value="MD">Moldova, Republic of</option>
+										<option value="MC">Monaco</option>
+										<option value="MN">Mongolia</option>
+										<option value="ME">Montenegro</option>
+										<option value="MS">Montserrat</option>
+										<option value="MA">Morocco</option>
+										<option value="MZ">Mozambique</option>
+										<option value="MM">Myanmar</option>
+										<option value="NA">Namibia</option>
+										<option value="NR">Nauru</option>
+										<option value="NP">Nepal</option>
+										<option value="NL">Netherlands</option>
+										<option value="AN">Netherlands Antilles</option>
+										<option value="NC">New Caledonia</option>
+										<option value="NZ">New Zealand</option>
+										<option value="NI">Nicaragua</option>
+										<option value="NE">Niger</option>
+										<option value="NG">Nigeria</option>
+										<option value="NU">Niue</option>
+										<option value="NF">Norfolk Island</option>
+										<option value="MP">Northern Mariana Islands</option>
+										<option value="NO">Norway</option>
+										<option value="OM">Oman</option>
+										<option value="PK">Pakistan</option>
+										<option value="PW">Palau</option>
+										<option value="PA">Panama</option>
+										<option value="PG">Papua New Guinea</option>
+										<option value="PY">Paraguay</option>
+										<option value="PE">Peru</option>
+										<option value="PH">Philippines</option>
+										<option value="PN">Pitcairn Island</option>
+										<option value="PL">Poland</option>
+										<option value="PT">Portugal</option>
+										<option value="PR">Puerto Rico</option>
+										<option value="QA">Qatar</option>
+										<option value="RE">Reunion</option>
+										<option value="RO">Romania</option>
+										<option value="RU">Russian Federation</option>
+										<option value="RW">Rwanda</option>
+										<option value="KN">Saint Kitts and Nevis</option>
+										<option value="LC">Saint Lucia</option>
+										<option value="VC">Saint Vincent and the Grenadines</option>
+										<option value="WS">Samoa</option>
+										<option value="SM">San Marino</option>
+										<option value="ST">Sao Tome and Principe</option>
+										<option value="SA">Saudi Arabia</option>
+										<option value="SN">Senegal</option>
+										<option value="RS">Serbia</option>
+										<option value="SC">Seychelles</option>
+										<option value="SL">Sierra Leone</option>
+										<option value="SG">Singapore</option>
+										<option value="SK">Slovakia</option>
+										<option value="SI">Slovenia</option>
+										<option value="SB">Solomon Islands</option>
+										<option value="SO">Somalia</option>
+										<option value="ZA">South Africa</option>
+										<option value="ES">Spain</option>
+										<option value="LK">Sri Lanka</option>
+										<option value="SH">St. Helena</option>
+										<option value="PM">St. Pierre and Miquelon</option>
+										<option value="SD">Sudan</option>
+										<option value="SR">Suriname</option>
+										<option value="SZ">Swaziland</option>
+										<option value="SE">Sweden</option>
+										<option value="CH">Switzerland</option>
+										<option value="SY">Syria</option>
+										<option value="TW">Taiwan</option>
+										<option value="TJ">Tajikistan</option>
+										<option value="TZ">Tanzania</option>
+										<option value="TH">Thailand</option>
+										<option value="TG">Togo</option>
+										<option value="TK">Tokelau</option>
+										<option value="TO">Tonga</option>
+										<option value="TT">Trinidad and Tobago</option>
+										<option value="TN">Tunisia</option>
+										<option value="TR">Turkey</option>
+										<option value="TM">Turkmenistan</option>
+										<option value="TC">Turks and Caicos Islands</option>
+										<option value="TV">Tuvalu</option>
+										<option value="UG">Uganda</option>
+										<option value="UA">Ukraine</option>
+										<option value="AE">United Arab Emirates</option>
+										<option value="GB">United Kingdom</option>
+										<option value="US" selected="selected">United States</option>
+										<option value="UY">Uruguay</option>
+										<option value="UZ">Uzbekistan</option>
+										<option value="VU">Vanuatu</option>
+										<option value="VE">Venezuela</option>
+										<option value="VN">Viet Nam</option>
+										<option value="VI">Virgin Islands (U.S.)</option>
+										<option value="WF">Wallis and Futuna Islands</option>
+										<option value="EH">Western Sahara</option>
+										<option value="YE">Yemen</option>
+										<option value="ZM">Zambia</option>
+										<option value="ZW">Zimbabwe</option>
+									</select>
+								</div> -->
+								<div class="field field-privacy">
+									<label for="id_privacy" class="privacy-check-label">
+									<input required="" aria-required="true" name="custom-314" id="id_privacy" type="checkbox">
+									<span class="title">J'accepte que vous utilisiez ces informations conformément à votre <a href="http://www.mozilla.org/en-US/privacy-policy">politique de confidentialité</a></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-submit">
+							<input id="footer_email_submit" value="Je m'inscris »" class="button" type="submit">
+							<p class="form-details">
+								<small>Nous ne vous enverrons que des informations concernant Mozilla.</small>
+							</p>
+						</div>
+					</form>
+					</aside>
+
+				</div>
+				</section>
+			</main>
+		</div>
+		<!-- close #wrapper -->
+		<footer id="colophon" class="">
+		<div class="row">
+			<div class="footer-logo">
+				<a href="http://www.mozilla-tunisia.org/"><img src="img/footer-mozilla.png" alt="mozilla"></a>
+			</div>
+			<div class="footer-license">
+				<p>
+					 Certaines parties de ce contenu sont ©1998–2013 par les contributeurs individuels de mozilla.org. Le contenu est disponible sous <a href="http://www.mozilla.org/fr/foundation/licensing/website-content/">licence Creative Commons</a>.
+				</p>
+				<p>
+					<a href="http://www.mozilla.org/fr/contribute/page/">Contribuer à cette page</a>
+				</p>
+			</div>
+			<ul class="footer-nav">
+				<li><a href="http://www.mozilla.org/fr/contact/spaces/">Contactez-nous</a></li>
+				<li><a href="http://www.mozilla.org/fr/about/partnerships/">Partenariats</a></li>
+				<li><a href="https://sendto.mozilla.org/page/contribute/EOYFR2013-webFR?source=mozillaorg_footer&amp;amount=20" class="donate">Faire un don</a></li>
+				<li><a href="http://www.mozilla.org/fr/privacy/">Respect de la vie privée</a></li>
+				<li><a href="http://www.mozilla.org/fr/about/legal.html">Avertissement légal</a></li>
+				<li><a href="http://www.mozilla.org/fr/legal/fraud-report/index.html">Signaler un abus de marque déposée</a></li>
+			</ul>
+			<ul class="footer-nav">
+				<li><a href="https://twitter.com/firefox">Twitter</a></li>
+				<li><a href="https://facebook.com/Firefox">Facebook</a></li>
+				<li><a href="https://affiliates.mozilla.org/">Firefox Affiliates</a></li>
+			</ul>
+			<div class="footer-lang">
+				<form id="lang_form" dir="ltr" method="get" action="#">
+					<label for="language">Autres langues&nbsp;:</label>
+					<select id="language" name="lang" dir="ltr">
+						<option value="af">Afrikaans</option>
+						<option value="an">aragonés</option>
+						<option value="ar">عربي</option>
+						<option value="ast">Asturianu</option>
+						<option value="bg">Български</option>
+						<option value="bn-IN">বাংলা (ভারত)</option>
+						<option value="br">Brezhoneg</option>
+						<option value="ca">Català</option>
+						<option value="cs">Čeština</option>
+						<option value="cy">Cymraeg</option>
+						<option value="da">Dansk</option>
+						<option value="de">Deutsch</option>
+						<option value="el">Ελληνικά</option>
+						<option value="en-US">English (US)</option>
+						<option value="eo">Esperanto</option>
+						<option value="es-AR">Español (de Argentina)</option>
+						<option value="es-CL">Español (de Chile)</option>
+						<option value="es-ES">Español (de España)</option>
+						<option value="es-MX">Español (de México)</option>
+						<option value="et">Eesti keel</option>
+						<option value="eu">Euskara</option>
+						<option value="fa">فارسی</option>
+						<option value="fi">suomi</option>
+						<option value="fr" selected="selected">Français</option>
+						<option value="fy-NL">Frysk</option>
+						<option value="ga-IE">Gaeilge</option>
+						<option value="gd">Gàidhlig</option>
+						<option value="he">עברית</option>
+						<option value="hi-IN">हिन्दी (भारत)</option>
+						<option value="hr">Hrvatski</option>
+						<option value="hu">magyar</option>
+						<option value="hy-AM">Հայերեն</option>
+						<option value="id">Bahasa Indonesia</option>
+						<option value="is">íslenska</option>
+						<option value="it">Italiano</option>
+						<option value="ko">한국어</option>
+						<option value="ku">Kurdî</option>
+						<option value="lt">lietuvių kalba</option>
+						<option value="mk">Македонски</option>
+						<option value="ms">Melayu</option>
+						<option value="nl">Nederlands</option>
+						<option value="oc">occitan (lengadocian)</option>
+						<option value="pl">Polski</option>
+						<option value="pt-BR">Português (do&nbsp;Brasil)</option>
+						<option value="rm">rumantsch</option>
+						<option value="ro">română</option>
+						<option value="ru">Русский</option>
+						<option value="sk">slovenčina</option>
+						<option value="sl">Slovenščina</option>
+						<option value="sq">Shqip</option>
+						<option value="sv-SE">Svenska</option>
+						<option value="tr">Türkçe</option>
+						<option value="uk">Українська</option>
+						<option value="xh">isiXhosa</option>
+						<option value="zh-CN">中文 (简体)</option>
+						<option value="zh-TW">正體中文 (繁體)</option>
+					</select>
+					<noscript>
+					<button type="submit">Go</button>
+					</noscript>
+				</form>
+			</div>
+		</div>
+		</footer>
+	</div>
+	<!-- close #outer-wrapper -->
+	<!--[if IE 9]>
+	      <script src="//mozorg.cdn.mozilla.net/media/js/libs/matchMedia.js"></script>
+	    <![endif]-->
+	<script src="js/mozorg-resp-min.js"></script>
+	<script src="js/tabzilla.js"></script>
+	<!--[if gt IE 7]> <!-- -->
+	<script src="js/home-min.js"></script>
+	<!-- <![endif]-->
+	<div class="crossrider-nofity-14917" index="0">	</div>
+	<div class="crossrider-nofity-14917-top-left">	</div>
+	<div class="crossrider-nofity-14917-top-right">	</div>
+	<div class="crossrider-nofity-14917-bottom-left"> </div>
+	<div class="crossrider-nofity-14917-bottom-right"></div>
+</body>
+
+</html>

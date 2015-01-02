@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return '<h1>Mozilla Tunisia New Home Page<h1> <a href="https://github.com/moztn/www-moztn">www-moztn</a>'
+    return render_template('home/index.html')
 
 
 
