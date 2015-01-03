@@ -10,9 +10,9 @@
     <script src="//mozorg.cdn.mozilla.net/media/js/libs/html5shiv.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" media="screen,projection,tv" href="css/responsive-min.css">
-    <link rel="stylesheet" media="screen,projection,tv" href="css/home2.css">
-    <link rel="stylesheet" media="screen,projection,tv" href="css/home-min.css">
+    <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/responsive-min.css') }}">
+    <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/home2.css') }}">
+    <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/home-min.css') }}">
 <!--[if IE 9]>
   <link rel="stylesheet" media="screen,projection,tv" href="//mozorg.cdn.mozilla.net/media/css/home-ie9-min.css?build=c6d3fcc" />
 <![endif]-->
@@ -26,32 +26,9 @@
 {% endblock %}
 
 {% block javascript %}
-    <script id="undefined" src="js/inpage_linkid.js" async="" type="text/javascript"></script>
-    <script src="js/ga.js" async="" type="text/javascript"></script>
-    <script src="js/site-min.js"></script>
-
-    <script>
-		var _gaq = _gaq || [];
-		var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
-		_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
-		_gaq.push(['_setAccount', 'UA-36116321-1']);
-		_gaq.push(['_setAllowLinker', true]);
-		_gaq.push(['_setAllowAnchor', true]);
-		_gaq.push(['_trackPageview']);
-
-		(function() {
-		    var ga = document.createElement('script');
-		    ga.type = 'text/javascript';
-		    ga.async = true;
-
-		    var prefix = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www');
-		    ga.src = prefix + '.google-analytics.com/ga.js';
-
-		    var s = document.getElementsByTagName('script')[0];
-		    s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
-{% endblock %}
+    <script id="undefined" src="{{ url_for('static', filename='home/js/inpage_linkid.js') }}" async="" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='home/js/site-min.js') }}"></script>
+    {% endblock %}
 </head>
 
 <body id="home" class="html-ltr sand lang-fr wide">
@@ -451,10 +428,10 @@
 	<!--[if IE 9]>
 	      <script src="//mozorg.cdn.mozilla.net/media/js/libs/matchMedia.js"></script>
 	    <![endif]-->
-	<script src="js/mozorg-resp-min.js"></script>
-	<script src="js/tabzilla.js"></script>
+	<script src="{{ url_for('static', filename='home/js/mozorg-resp-min.js') }}"></script>
+	<script src="{{ url_for('static', filename='common/js/tabzilla.js') }}"></script>
 	<!--[if gt IE 7]> <!-- -->
-	<script src="js/home-min.js"></script>
+	<script src="{{ url_for('static', filename='home/js/home-min.js') }}"></script>
 	<!-- <![endif]-->
 	<div class="crossrider-nofity-14917" index="0">	</div>
 	<div class="crossrider-nofity-14917-top-left">	</div>
