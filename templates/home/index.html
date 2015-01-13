@@ -39,9 +39,9 @@
     {% block main_content %}
 			<main id="main-content" role="main">
 				<header class="mission">
-					<img id="logo" src="img/logo.png">
+					<img id="logo" src="{{ url_for('static', filename='common/img/logo.png') }}">
 					<h1>
-						<img class="mz" src="img/mozilla-wordmark-red.png" data-src="//mozorg.cdn.mozilla.net/media/img/home/mozilla-wordmark-red.png" data-high-res="true" alt="Mozilla" height="70" width="258">
+						<img class="mz" src="{{ url_for('static', filename='common/img/mozilla-wordmark-red.png') }}" data-src="//mozorg.cdn.mozilla.net/media/img/home/mozilla-wordmark-red.png" data-high-res="true" alt="Mozilla" height="70" width="258">
 						Tunisia
 					</h1>
 					<p class="tagline">
@@ -125,7 +125,7 @@
 				<div class="container">
 					<a href="http://www.mozilla.org/fr/firefox/" id="firefox-promo-link">
 					<h3>
-					<img class="" src="img/firefox-sm.png" data-high-res="true" alt="" height="100" width="280">
+					<img class="" src="{{ url_for('static', filename='home/img/firefox-sm.png') }}" data-high-res="true" alt="" height="100" width="280">
 
 						Engagé pour vous, votre vie privée et un web ouvert </h3>
 					</a>
