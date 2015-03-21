@@ -587,6 +587,20 @@
     font-size: 36px;
     text-align: center;
 }
+.newsletter-form, .small{
+ width: 300px !important;
+}
+#footer-email-form h3{
+ font-size: 2.625rem;
+}
+#footer-email-form .form-contents{
+ width: 100%;
+ float: none;
+}
+#footer-email-form .form-submit{
+ width: 100%;
+ float: none;
+}
 .mission h1 img {
     /*display: block;*/
     margin: -0.125em auto 0;
@@ -691,7 +705,7 @@
     width: auto;
 }
 #firefox-promo h3 img {
-    margin-top: 0;
+   margin: -15px 70px -5px 0px;
 }
 #firefox-promo h3 b {
     border: 0;
