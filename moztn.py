@@ -33,6 +33,10 @@ def contact():
     return 'Not yet done'
 
 
+@app.errorhandler(404)
+def blog_redirection(e):
+    return redirect('https://blog.mozilla-tunisia.org{0}'.format(request.path))
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
