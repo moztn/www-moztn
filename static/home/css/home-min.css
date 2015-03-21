@@ -754,8 +754,8 @@
 }
 /*add panel-kernel style*/
 #panel-kernel {
-  background: #b30406 url("../img/bg-kernel-mosaic.png") -50px -80px no-repeat;
-  background: url("../img/bg-kernel-mosaic.png") -50px -80px no-repeat, #b30406 url("../img/bg-lightbeam.jpg") repeat;
+  background: #D4DDE4 url("../img/bg-kernel-mosaic.png") -50px -80px no-repeat;
+  background: url("../img/bg-kernel-mosaic.png") -50px -80px no-repeat, #D4DDE4 repeat;
 }
 #panel-kernel .panel-title i {
   display: block;
@@ -770,14 +770,14 @@
 }
 /*add panel-blog style*/
 #panel-blog {
-  background: #b30406 url("../img/bg-logo-moztn-sm-hires.png") -50px -80px no-repeat;
-  background: url("../img/bg-logo-moztn-sm-hires.png") -50px -80px no-repeat, #b30406 url("../img/bg-lightbeam.jpg") repeat;
+  background: #404c58 url("../img/bg-logo-moztn-hires.png") -50px -80px no-repeat;
+  background: url("../img/bg-logo-moztn-hires.png") -50px -80px no-repeat, #404c58 repeat;
 }
 #panel-blog .panel-title i {
   display: block;
 }
 .wide #panel-blog .panel-title {
-  background: #e58322;
+  background: #404c58;
   background: rgba(229, 131, 34, 0.8);
   background: -webkit-linear-gradient(bottom, rgba(229, 131, 34, 0.95) 50%, rgba(229, 131, 34, 0.8) 65%, rgba(229, 131, 34, 0) 100%);
   background: -moz-linear-gradient(bottom, rgba(229, 131, 34, 0.95) 50%, rgba(229, 131, 34, 0.8) 65%, rgba(229, 131, 34, 0) 100%);
@@ -1189,6 +1189,31 @@
 #panel-fxos.compressed {
     background-position: -85px -110px;
 }
+
+/*kernel*/
+#panel-kernel {
+    background-image: url("../img/bg-kernel-mosaic-sm.png");
+    background-position: -121px -75px;
+}
+#panel-kernel.expanded {
+    background-position: -121px -75px;
+}
+#panel-kernel.compressed {
+    background-position: -85px -110px;
+}
+
+/*blog*/
+#panel-blog {
+    background-image: url("../img/bg-logo-moztn-sm.png");
+    background-position: -21px -76px;
+}
+#panel-blog.expanded {
+    background-position: -25px -30px;
+}
+#panel-blog.compressed {
+    background-position: -25px -110px;
+}
+
 .accordion #panel-vans {
     background-image: url("../img/bg-vtcs-sm.png");
     background-position: -50px -145px;
