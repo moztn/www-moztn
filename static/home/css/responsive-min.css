@@ -2010,6 +2010,10 @@ nav.menu-bar ul li:first-child a {
 #colophon .row {
     width: 420px;
 }
+
+.foo_icon {
+    margin: 15px;
+}
 }@media only screen and (max-width:480px) {
     .title-shadow-box {
     width: 240px;
@@ -2030,3 +2034,8 @@ nav.menu-bar ul li:first-child a {
     padding: 0;
     border: 0;
 }
+
+.foo_icon {
+    margin: 15px;
+}
+

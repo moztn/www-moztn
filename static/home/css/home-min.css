@@ -1468,3 +1468,12 @@
     letter-spacing: -0.06em;
     padding-left: 150px;
  }
+
+.foo_icon {
+    margin: 5px;
+}
+
+span a:link a:hover a:visited a:active {
+    text-decoration: none !important; 
+    color: black !important;
+}
