@@ -1,12 +1,39 @@
+# coding: utf-8
 from flask import (
     Flask, url_for, render_template, session, redirect, escape, request,
     flash, redirect, current_app
 )
 
+from flask_wtf import Form, RecaptchaField
+from wtforms import TextField, TextAreaField, SubmitField, validators, ValidationError
+
+
+
+class ContactForm(Form):
+
+  first_name = TextField("Nom",
+      [validators.Required("Le nom est obligatoire.")])
+  last_name = TextField("Prenom",
+      [validators.Required("Le Prénom est obligatoire.")])
+
+
+  email = TextField("Email",
+      [validators.Required("L'adresse email est obligatoire."),
+      validators.Email("Il faut entrer une adresse email correcte")])
+  subject = TextField("Sujet",
+      [validators.Required("Le sujet est obligatoire.")])
+  message = TextAreaField("Message", 
+      [validators.Required("Veuillez entrer votre message.")])
+  submit = SubmitField("Envoyer")
+
+
+
 
 app = Flask(__name__)
 
 
+
+# routes
 
 @app.route('/')
 def home():
@@ -28,9 +55,18 @@ def join():
 def about():
     return render_template('about/index.html')
 
-@app.route('/contact')
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
-    return 'Not yet done'
+    form = ContactForm()
+
+    if request.method == 'POST':
+      if form.validate() == False:
+        flash("Error")
+        return render_template('contact/index.html', form=form)
+      else:
+        return render_template('contact/index.html', status=True)
+    elif request.method == 'GET':
+        return render_template('contact/index.html', form=form)
 
 
 @app.errorhandler(404)
