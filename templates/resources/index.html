@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block title %}Ressources Mozilla Tunisia{% endblock %}
+{% block title %}Ressources{% endblock %}
 
 {% block style %}
 
@@ -51,12 +51,11 @@
 						<a href="http://www.mozilla.org/fr/contribute/" class="button go">Contribuer</a>
 					</p>
 				</header>
-    <section class="module" id="upcoming-events">
+    <section class="extra" id="upcoming-events">
+     <div class="container">
+      <h1 class="title-shadow-box">{{ self.title()}}</h1>
+     </div>
       <div class="container">
-       <div class="header-resources">
-        <h2>Ressources</h2>
-        <p>Mozilla Tunisia met a votre disposition des ressources pour vous aider à la contibution.</p>
-       </div>
         <div class="inner-container">
 
           <div class="featured-event">
@@ -64,9 +63,8 @@
             <a rel="external" href="#" class="date-large"></a>
             <div class="event-detail">
               <a rel="external" href="http://wiki.mozilla-tunisia.org">
-                <h4>Wiki Mozilla Tunisia</h4>
+                <h2>Wiki Mozilla Tunisia</h2>
               </a>
-              <br><br>
                 <p class="event-info l-ocation">Le wiki de la communauté Mozilla Tunisia où vous trouverez plus d'informations sur la communauté, son historique, les évenements et d'autres pages utiles.</p>
 
             </div>
@@ -77,9 +75,8 @@
             <a rel="external" href="#" class="date-large"></a>
             <div class="event-detail">
               <a rel="external" href="#">
-                <h4>Slides</h4>
+                <h2>Slides</h2>
               </a>
-              <br><br>
                 <p class="event-info l-ocation">Le nouveau grand projet par la communauté où vous trouverez des présentations qui peuvent vous aider.</p>
 
             </div>
@@ -90,9 +87,8 @@
             <a rel="external" href="#" class="date-large"></a>
             <div class="event-detail">
               <a rel="external" href="#">
-                <h4>Firefox OS Betounsi</h4>
+                <h2>Firefox OS Betounsi</h2>
               </a>
-              <br><br>
                 <p class="event-info l-ocation">Un autre projet de la communauté sous forme de Web-série destinée aux fans du nouveau OS mobile de Mozilla "Firefox OS" mais en dialecte tunisien.</p>
 
             </div>
@@ -103,10 +99,20 @@
             <a rel="external" href="#" class="date-large"></a>
             <div class="event-detail">
               <a rel="external" href="#">
-                <h4>Style Guide</h4>
+                <h2>Style Guide</h2>
               </a>
-              <br><br>
                 <p class="event-info l-ocation">Le guide complet pour télécharger et utiliser le logo de Mozilla Tunisia.</p>
+
+            </div>
+          </div>
+          <div class="featured-event">
+            <span class="res_icon proj_icon"></span>
+            <a rel="external" href="#" class="date-large"></a>
+            <div class="event-detail">
+              <a rel="external" href="#">
+                <h2>Projects</h2>
+              </a>
+                <p class="event-info l-ocation">Description</p>
 
             </div>
           </div>

@@ -97,24 +97,6 @@
 	//font-weight: bold;
 
 }
-.container h1 {
-	margin: 50px auto 10px !important;
-}
-.container .header-resources h2 {
-			color: #484848;
-			display: block;
-			float: left;
-			font-size: 3rem;
-			letter-spacing: -0.035em;
-			line-height: 1px;
-			margin: 10px auto 50px;
-			padding: 0;
-			text-align: left;
-			width: 100%;
-}
-.container .header-resources p{
-	float:left;
-}
 .container .inner-container{
 	margin-top:24px;
 }
@@ -138,6 +120,13 @@
 	height:150px;
 	float:left;
 	margin:0 20px 20px 20px;
+/*	-webkit-border-radius: 50em;
+	-moz-border-radius: 50em;
+	border-radius: 50em;
+	-webkit-box-shadow: inset 0 0 2px rgba(0,0,0,.8), inset 0 2px 0 rgba(255,255,255,.5), inset 0 -7px 0 rgba(0,0,0,.6), inset 0 -9px 0 rgba(255,255,255,.3);
+	-moz-box-shadow: inset 0 0 2px rgba(0,0,0,.8), inset 0 2px 0 rgba(255,255,255,.5), inset 0 -7px 0 rgba(0,0,0,.6), inset 0 -9px 0 rgba(255,255,255,.3);
+	box-shadow: inset 0 0 2px rgba(0,0,0,.8), inset 0 2px 0 rgba(255,255,255,.5), inset 0 -7px 0 rgba(0,0,0,.6), inset 0 -9px 0 rgba(255,255,255,.3);
+*/
 }
 
 .wiki_icon {
