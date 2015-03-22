@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% block title %}About Mozilla Tunisia{% endblock %}
+
+{% block style %}
+
+
+    <!--[if lte IE 8]>
+    <script src="//mozorg.cdn.mozilla.net/media/js/libs/html5shiv.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/responsive-min.css') }}">
+    <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/home2.css') }}">
+    <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/home-min.css') }}">
+
+
+<!--[if IE 9]>
+  <link rel="stylesheet" media="screen,projection,tv" href="//mozorg.cdn.mozilla.net/media/css/home-ie9-min.css?build=c6d3fcc" />
+<![endif]-->
+<!--[if IE 8]>
+  <link rel="stylesheet" media="screen,projection,tv" href="//mozorg.cdn.mozilla.net/media/css/home-ie8-min.css?build=c6d3fcc" />
+<![endif]-->
+<!--[if lt IE 8]>
+  <link rel="stylesheet" media="screen,projection,tv" href="//mozorg.cdn.mozilla.net/media/css/home-ie-min.css?build=c6d3fcc" />
+<![endif]-->
+
+{% endblock %}
+
+{% block javascript %}
+    <script id="undefined" src="{{ url_for('static', filename='home/js/inpage_linkid.js') }}" async="" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='home/js/site-min.js') }}"></script>
+    {% endblock %}
+</head>
+
+<body id="home" class="html-ltr sand lang-fr wide">
+	<div id="strings" data-global-close="Fermer" data-news-next="Article suivant" data-news-prev="Article précédent">
+	</div>
+
+	<div id="outer-wrapper">
+		<div id="wrapper">
+    {% block main_content %}
+			<main id="main-content" role="main">
+				<header class="mission">
+					<img id="logo" src="{{ url_for('static', filename='common/img/logo.png') }}">
+					<h1>
+						<img class="mz" src="{{ url_for('static', filename='common/img/mozilla-wordmark-red.png') }}" data-src="//mozorg.cdn.mozilla.net/media/img/home/mozilla-wordmark-red.png" data-high-res="true" alt="Mozilla" height="70" width="258">
+						Tunisia
+					</h1>
+					<p class="tagline">
+						Un Web plus juste, c'est dans nos co{r}des
+					</p>
+					<p class="engage">
+						<a href="http://www.mozilla.org/fr/contribute/" class="button go">Contribuer</a>
+					</p>
+				</header>
+				
+				<section class="extra">
+					<div class="container">
+						<h1 class="title-shadow-box">{{ self.title()}}</h1>
+					</div>
+					<div class="container">
+
+						<h2 class="">Qui sommes nous?</h2>
+						<p class="intro intro-left">Nous sommes la communauté Mozilla Tunisia. Une communauté tunisienne qui  représente la <a href="https://www.mozilla.org/"> fondation internationale Mozilla</a> en Tunisie. Notre communauté est basée sur  le principe des communautés Open Source où tous les membres sont des  volontaires et œuvrent dans le cadre de manifestations dans un but non lucratif. Elle compte aujourd'hui plus d’une centaine de membre  avec un noyau  actif de plus de 10 personnes. La communauté a été Fondée  en Novembre  2010. Fruit de la passion que portent ses  membres fondateurs pour les  logiciels libres et le web, Mozilla Tunisia  est l'illustration parfait  de l'esprit communautaire et la défense des  valeurs de partage.
+						</p>
+						<div class="video video-right">
+							<img class="placeholder-img" alt="Mozilla" src="//mozorg.cdn.mozilla.net/media/img/mozorg/about/poster-i-am.af045a467fad.jpg">
+						</div>
+					</div>
+				<!-- </section>
+				<section class="extra"> -->
+					<div class="container">		
+						<h2 class="">Pourquoi une communauté locale?</h2>
+						<p class="intro intro-right">Il est essentiel pour Mozilla d'avoir des communautés locales afin de faciliter l'accès à ses ressources et avoir un support adapté selon la culture de chaque pays. Il est question de trouver un support physique pour les produits ou les activités de Mozilla parlant la langue locale.
+						</p>
+						<div class="video video-left">
+							<img class="placeholder-img" alt="Mozilla" src="//mozorg.cdn.mozilla.net/media/img/mozorg/about/poster-i-am.af045a467fad.jpg">
+						</div>
+					</div>
+					<div class="container">		
+						<h2 class="">Activité</h2>
+						<p class="intro intro-left">Nous avons réalisé plusieurs événements de différentes natures (technique, marketing, localisation ...). Nous avons essentiellement visité des universités et réalisé des manifestations en collaboration avec les clubs universitaires. 
+						Notre activité a aussi évoluée pour compter des formations. Cela compte des formations sur la manière d'utiliser les produits de Mozilla tels que Firefox OS ou encore comment créer des add-ons pour Firefox.
+
+						Ayant gagné en maturité nous avons lancé par la suite des programmes sur plusieurs semaines. Chaque programme avait un objectif et comptait plusieurs étapes. Il s'agissait de réunir nos deux précédentes activités mais sur une période plus longue et avec un meilleur suivi. Parmi nos programmes nous avions le Mozilla Tunisia Tour '12 qui a connu un succès et qui s'est étendu sur plus de 6 mois. 
+						</p>
+						<div class="video video-right">
+							<img class="placeholder-img" alt="Mozilla" src="//mozorg.cdn.mozilla.net/media/img/mozorg/about/poster-i-am.af045a467fad.jpg">
+						</div>
+					</div>
+					<div class="container">		
+						<h2 class=""> Structure de la communauté </h2>
+						<p class="intro intro-left">Mozilla Tunisia est composé d'un <a href="http://wiki.mozilla-tunisia.org/Kernel">noyau</a> d'une dizaine de personnes et de contributeurs "voyageurs". Le noyau est composé de membres fixes qui ont presque suivi Mozilla Tunisia depuis ses débuts. Il a pour objectif de clarifier et aligner les axes de la communauté de manière annuelle et faciliter l'intégration des nouveaux venus. 
+Par la suite vous trouvez des contributeurs temporaires qui suivant leur disponibilité, ils participent à des événements ou des sprints de code. 
+Notre communauté est en constante évolution. L'aspect dynamique varie suivant la disponibilité et les projets sur lesquels ont travaille. 
+						</p>
+						<div class="video video-right">
+							<img class="placeholder-img" alt="Mozilla" src="//mozorg.cdn.mozilla.net/media/img/mozorg/about/poster-i-am.af045a467fad.jpg">
+						</div>
+					</div>
+				</section>
+			</main>
+    {% endblock %}
+		</div>
+		<!-- close #wrapper -->
+	</div>
+	<!-- close #outer-wrapper -->
+{% block last_load_javascript %}
+	<!--[if IE 9]>
+	      <script src="//mozorg.cdn.mozilla.net/media/js/libs/matchMedia.js"></script>
+	    <![endif]-->
+	<script src="{{ url_for('static', filename='home/js/mozorg-resp-min.js') }}"></script>
+	<!--[if gt IE 7]> <!-- -->
+	<script src="{{ url_for('static', filename='home/js/home-min.js') }}"></script>
+	<!-- <![endif]-->
+	<div class="crossrider-nofity-14917" index="0">	</div>
+	<div class="crossrider-nofity-14917-top-left">	</div>
+	<div class="crossrider-nofity-14917-top-right">	</div>
+	<div class="crossrider-nofity-14917-bottom-left"> </div>
+	<div class="crossrider-nofity-14917-bottom-right"></div>
+{% endblock %}
+</body>
+
+</html>

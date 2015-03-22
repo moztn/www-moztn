@@ -1,3 +1,39 @@
+#main-content .intro {
+    clear: left;
+    /*float: left;*/
+    font-family: "Open Sans Light",X-LocaleSpecific-Light,"Open Sans",X-LocaleSpecific,sans-serif;
+    font-weight: normal;
+    letter-spacing: -0.5px;
+    line-height: 1.1em;
+    margin: -0.25em 10px 0;
+    text-align: justify;
+    
+}
+.intro-left {
+    float: left;
+}
+.intro-right {
+    float: right;
+}
+
+.video-left {
+    float: left;
+}
+.video-right {
+    float: right;
+}
+
+#main-content .intro {
+    font-size: 1.2rem;
+    width: 55%;
+}
+#main-content .video {
+    /*float: right;*/
+    /*margin: 20px 0;*/
+    width: 40%;
+}
+
+
 .form-field-error {
     border-color: #af3232;
     -webkit-box-shadow: 0 0 0 2px rgba(175, 50, 50, 0.4);
@@ -596,6 +632,15 @@
  }@media only screen and (max-width:760px) {
     #masthead, .container, .newsletter-form, .pillars {
     width: 300px;
+}
+#main-content .intro {
+    font-size: 1.2rem;
+    width: 100%;
+}
+#main-content .video {
+    /*float: right;*/
+    margin: 20px 0;
+    width: 100%;
 }
 .mission {
     width: 260px;
@@ -1508,3 +1553,12 @@
     letter-spacing: -0.06em;
     padding-left: 150px;
  }
+
+.foo_icon {
+    margin: 5px;
+}
+
+span a:link a:hover a:visited a:active {
+    text-decoration: none !important; 
+    color: black !important;
+}
