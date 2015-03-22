@@ -30,7 +30,7 @@ class ContactForm(Form):
 
 
 app = Flask(__name__)
-
+app.secret_key = 'test_key'
 
 
 # routes
