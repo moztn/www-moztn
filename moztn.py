@@ -26,7 +26,7 @@ def join():
 
 @app.route('/about')
 def about():
-    return 'Not yet done'
+    return render_template('about/index.html')
 
 @app.route('/contact')
 def contact():
