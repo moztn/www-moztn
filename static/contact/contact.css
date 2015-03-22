@@ -1,0 +1,161 @@
+.inquiry-form ul {
+    list-style: outside none none;
+}
+.inquiry-form .section-title {
+    margin-left: 10px;
+    text-align: left;
+}
+.inquiry-form .areas {
+    background: none repeat scroll 0 0 #f5f1e8;
+    border-radius: 6px;
+    margin: 0 -10px;
+    padding: 20px 10px;
+    text-align: left;
+}
+.inquiry-form .areas .section-title {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+}
+.inquiry-form .areas label {
+    display: block;
+    font-family: "Open Sans Light",X-LocaleSpecific-Light,"Open Sans",X-LocaleSpecific,sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    margin: 0 0 0.5em;
+}
+.inquiry-form .areas p {
+    margin: 0 10px;
+}
+.inquiry-form .personal {
+    padding: 30px 0;
+}
+.inquiry-form .personal::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.inquiry-form .personal li {
+    float: left;
+    margin: 0 10px 20px;
+    text-align: left;
+    width: 45%;
+}
+.inquiry-form .personal label, .inquiry-form .personal .label {
+    display: block;
+    font-size: 1rem;
+    margin: 0 0 0.25em;
+}
+.inquiry-form .personal label.inline, .inquiry-form .personal .inline label {
+    display: inline-block;
+}
+.inquiry-form .personal .form-message {
+    clear: both;
+    float: none;
+    margin: 0 10px 20px;
+    width: auto;
+}
+.inquiry-form .personal .form-agree {
+    clear: both;
+    float: none;
+    margin: 0 10px 20px;
+    width: auto;
+}
+.inquiry-form .personal .form-agree label {
+    font-size: 0.875rem;
+}
+.inquiry-form .personal .form-format {
+    clear: both;
+    float: none;
+    margin: 0 10px 20px;
+    width: auto;
+}
+.inquiry-form .personal .form-format .label {
+    display: inline;
+    margin-right: 30px;
+}
+.inquiry-form .personal .form-format label {
+    font-size: 0.875rem;
+    margin-right: 10px;
+}
+.inquiry-form .personal .form-newsletter {
+    clear: both;
+    float: none;
+    margin: 0 10px 20px;
+    text-align: center;
+    width: auto;
+}
+.inquiry-form .personal .select {
+    width: 100%;
+}
+.inquiry-form .submit {
+    margin: 0 10px;
+    padding-top: 90px;
+    position: relative;
+    text-align: center;
+}
+.inquiry-form .submit button {
+    background-color: #0096dd;
+    border: 0 none;
+    border-radius: 0.5em;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Open Sans",X-LocaleSpecific,sans-serif;
+    font-size: 1.125rem;
+    font-weight: bold;
+    left: 50%;
+    margin-left: -220px;
+    padding: 20px 40px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    transition: all 0.15s ease-in-out 0s;
+    width: 440px;
+}
+.inquiry-form .submit button:hover, .inquiry-form .submit button:focus, .inquiry-form .submit button:active {
+    background-color: #00a7f7;
+    color: #fff;
+    text-decoration: none;
+}
+.inquiry-form .submit button::after {
+    content: " »";
+    white-space: nowrap;
+}
+.inquiry-form input[type="checkbox"] {
+    font-size: 1rem;
+    height: 16px;
+    width: 16px;
+}
+.inquiry-form .errorlist {
+    color: #c13832;
+    margin: 0;
+    padding: 0.25em 0;
+}
+.inquiry-form .errorlist li {
+    float: none;
+    margin: 0 0 0.5em;
+    width: auto;
+}
+input[type="text"], input[type="email"], textarea {
+    background: none repeat scroll 0 0 #fcf9f4;
+    border: 2px solid #d7d3c8;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding: 0.5em 8px;
+    transition: border-color 0.2s ease 0s;
+    width: 100%;
+}
+input:focus, textarea:focus {
+    background: none repeat scroll 0 0 #fff;
+}

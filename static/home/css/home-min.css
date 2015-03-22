@@ -1,3 +1,4 @@
+
 #main-content .intro {
     clear: left;
     /*float: left;*/
@@ -635,11 +636,12 @@
 }
 #main-content .intro {
     font-size: 1.2rem;
-    width: 100%;
+    margin: 20px;
+    width: auto;
 }
 #main-content .video {
     /*float: right;*/
-    margin: 20px 0;
+    margin: 40px 0;
     width: 100%;
 }
 .mission {

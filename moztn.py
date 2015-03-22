@@ -45,7 +45,7 @@ def contribute():
 
 @app.route('/resources')
 def resources():
-    return 'Not yet done'
+    return render_template('resources/index.html')
 
 @app.route('/join')
 def join():
