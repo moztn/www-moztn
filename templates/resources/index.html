@@ -1,0 +1,169 @@
+{% extends "layout.html" %}
+
+{% block title %}Ressources Mozilla Tunisia{% endblock %}
+
+{% block style %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='resources/style/style.css') }}" />
+    <!--[if lte IE 8]>
+    <script src="//mozorg.cdn.mozilla.net/media/js/libs/html5shiv.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/responsive-min.css') }}">
+    <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/home2.css') }}">
+    <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/home-min.css') }}">
+<!--[if IE 9]>
+  <link rel="stylesheet" media="screen,projection,tv" href="//mozorg.cdn.mozilla.net/media/css/home-ie9-min.css?build=c6d3fcc" />
+<![endif]-->
+<!--[if IE 8]>
+  <link rel="stylesheet" media="screen,projection,tv" href="//mozorg.cdn.mozilla.net/media/css/home-ie8-min.css?build=c6d3fcc" />
+<![endif]-->
+<!--[if lt IE 8]>
+  <link rel="stylesheet" media="screen,projection,tv" href="//mozorg.cdn.mozilla.net/media/css/home-ie-min.css?build=c6d3fcc" />
+<![endif]-->
+
+{% endblock %}
+
+{% block javascript %}
+    <script id="undefined" src="{{ url_for('static', filename='home/js/inpage_linkid.js') }}" async="" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='home/js/site-min.js') }}"></script>
+    {% endblock %}
+</head>
+
+<body id="home" class="html-ltr sand lang-fr wide">
+	<div id="strings" data-global-close="Fermer" data-news-next="Article suivant" data-news-prev="Article précédent">
+	</div>
+
+	<div id="outer-wrapper">
+		<div id="wrapper">
+    {% block main_content %}
+			<main id="main-content" role="main">
+				<header class="mission">
+					<img id="logo" src="{{ url_for('static', filename='common/img/logo.png') }}">
+					<h1>
+						<img class="mz" src="{{ url_for('static', filename='common/img/mozilla-wordmark-red.png') }}" data-src="//mozorg.cdn.mozilla.net/media/img/home/mozilla-wordmark-red.png" data-high-res="true" alt="Mozilla" height="70" width="258">
+						Tunisia
+					</h1>
+					<p class="tagline">
+						Un Web plus juste, c'est dans nos co{r}des
+					</p>
+					<p class="engage">
+						<a href="http://www.mozilla.org/fr/contribute/" class="button go">Contribuer</a>
+					</p>
+				</header>
+    <section class="module" id="upcoming-events">
+      <div class="container">
+       <div class="header-resources">
+        <h2>Ressources</h2>
+        <p>Mozilla Tunisia met a votre disposition des ressources pour vous aider à la contibution.</p>
+       </div>
+        <div class="inner-container">
+
+          <div class="featured-event">
+            <span class="res_icon wiki_icon"></span>
+            <a rel="external" href="#" class="date-large"></a>
+            <div class="event-detail">
+              <a rel="external" href="http://wiki.mozilla-tunisia.org">
+                <h4>Wiki Mozilla Tunisia</h4>
+              </a>
+              <br><br>
+                <p class="event-info l-ocation">Le wiki de la communauté Mozilla Tunisia où vous trouverez plus d'informations sur la communauté, son historique, les évenements et d'autres pages utiles.</p>
+
+            </div>
+          </div>
+
+          <div class="featured-event">
+            <span class="res_icon slides_icon"></span>
+            <a rel="external" href="#" class="date-large"></a>
+            <div class="event-detail">
+              <a rel="external" href="#">
+                <h4>Slides</h4>
+              </a>
+              <br><br>
+                <p class="event-info l-ocation">Le nouveau grand projet par la communauté où vous trouverez des présentations qui peuvent vous aider.</p>
+
+            </div>
+          </div>
+
+          <div class="featured-event">
+            <span class="res_icon fob_icon"></span>
+            <a rel="external" href="#" class="date-large"></a>
+            <div class="event-detail">
+              <a rel="external" href="#">
+                <h4>Firefox OS Betounsi</h4>
+              </a>
+              <br><br>
+                <p class="event-info l-ocation">Un autre projet de la communauté sous forme de Web-série destinée aux fans du nouveau OS mobile de Mozilla "Firefox OS" mais en dialecte tunisien.</p>
+
+            </div>
+          </div>
+
+          <div class="featured-event">
+            <span class="res_icon sgtn_icon"></span>
+            <a rel="external" href="#" class="date-large"></a>
+            <div class="event-detail">
+              <a rel="external" href="#">
+                <h4>Style Guide</h4>
+              </a>
+              <br><br>
+                <p class="event-info l-ocation">Le guide complet pour télécharger et utiliser le logo de Mozilla Tunisia.</p>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+    <section class="module" id="project-links">
+      <div class="container">
+        <h1 style="color:#484848;margin-top:20px">Besoin de plus ?</h1>
+        <p>Découvrez les ressources de Mozilla</p>
+        <ul>
+          <li>
+            <a class="" rel="external" href="developer.mozilla.org">
+              <h2 class="mdn_icon">MDN</h2>
+            </a>
+          </li>
+          <li>
+            <a class="" rel="external" href="wiki.mozilla.org">
+              <h2 class="mwiki_icon">Mozilla Wiki</h2>
+            </a>
+          </li>
+          <li>
+            <a class="" rel="external" href="hack.mozilla.org">
+              <h2 class="hacks_icon">Mozilla Hacks</h2>
+            </a>
+          </li>
+          <li>
+            <a class="" rel="external" href="https://www.mozilla.org/en-US/styleguide/">
+              <h2 class="sg_icon">Mozilla Style Guide</h2>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+			</main>
+    {% endblock %}
+		</div>
+		<!-- close #wrapper -->
+	</div>
+	<!-- close #outer-wrapper -->
+{% block last_load_javascript %}
+	<!--[if IE 9]>
+	      <script src="//mozorg.cdn.mozilla.net/media/js/libs/matchMedia.js"></script>
+	    <![endif]-->
+	<script src="{{ url_for('static', filename='home/js/mozorg-resp-min.js') }}"></script>
+	<script src="//mozorg.cdn.mozilla.net/en-US/tabzilla/tabzilla.js"></script>
+	<!--[if gt IE 7]> <!-- -->
+	<script src="{{ url_for('static', filename='home/js/home-min.js') }}"></script>
+	<!-- <![endif]-->
+	<div class="crossrider-nofity-14917" index="0">	</div>
+	<div class="crossrider-nofity-14917-top-left">	</div>
+	<div class="crossrider-nofity-14917-top-right">	</div>
+	<div class="crossrider-nofity-14917-bottom-left"> </div>
+	<div class="crossrider-nofity-14917-bottom-right"></div>
+{% endblock %}
+</body>
+
+</html>

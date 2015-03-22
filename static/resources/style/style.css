@@ -1,0 +1,200 @@
+#project-links {
+	background: #fff
+}
+#project-links ul {
+	position: relative;
+	list-style-type: none;
+	width: 100%;
+	margin: 0 auto;
+	padding: 60px 0 40px 0;
+	zoom: 1
+}
+#project-links ul:after {
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+	content: "."
+}
+#project-links ul li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 25%;
+}
+#project-links h2 {
+	position: relative;
+	font-size: 24px;
+	font-size: 1.5rem;
+	color: #484848;
+	padding-top: 100px
+}
+/*
+#project-links h2:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 84px;
+	background: url(assets/circle.png) no-repeat center top;
+	background-size: 84px 84px;
+}
+*/
+#project-links a {
+	display: block;
+	padding: 0 50px;
+	text-align: center
+}
+#project-links a.add-ons h2:before {
+	background-position: center 0
+}
+#project-links a.careers h2:before {
+	background-position: center -86px
+}
+#project-links a.help h2:before {
+	background-position: center -172px
+}
+#project-links a:hover,
+#project-links a:active,
+#project-links a:focus {
+	text-decoration: none
+}
+#project-links a:hover h2,
+#project-links a:active h2,
+#project-links a:focus h2 {
+	text-decoration: underline
+}
+#project-links p {
+	color: #484848;
+	font-size: 16px;
+	font-size: 1rem;
+	margin-top: 20px
+}
+.action-big {
+	width: 450px;
+	height: 45px;
+	font-size: 1.125rem;
+	line-height: 43px;
+	font-weight: normal;
+	box-shadow: none;
+	border-radius: 7px;
+	margin: 20px auto;
+	padding: 5px 0 !important;
+	color: white;
+}
+.action-big:hover,
+.action-big:visited {
+	color: white!important;
+}
+.blue {
+	background-color: #0095DD;
+}
+.blue:hover {
+	background-color: #00A6F7;
+}
+.logo-title {
+	font-family: "Open Sans", X-LocaleSpecific, sans-serif;
+	font-size: 93px;
+	color: white;
+	//font-weight: bold;
+
+}
+.container h1 {
+	margin: 50px auto 10px !important;
+}
+.container .header-resources h2 {
+			color: #484848;
+			display: block;
+			float: left;
+			font-size: 3rem;
+			letter-spacing: -0.035em;
+			line-height: 1px;
+			margin: 10px auto 50px;
+			padding: 0;
+			text-align: left;
+			width: 100%;
+}
+.container .header-resources p{
+	float:left;
+}
+.container .inner-container{
+	margin-top:24px;
+}
+.container .inner-container, .featured-event, .featured-event, .featured-event{
+	float: left;
+}
+.featured-event, .event-detail{
+	margin:0px;
+	width:100%;
+}
+.featured-event, .event-detail, h4{
+	float: left;
+}
+.event-detail, .event-info{
+	margin-left:3px;
+	width: 78%;
+	text-align: -moz-left;
+}
+.res_icon {
+	width:150px;
+	height:150px;
+	float:left;
+	margin:0 20px 20px 20px;
+}
+
+.wiki_icon {
+	background:url(../img/icon_wiki_moztn.png) no-repeat;
+	background-size:100px 100px;
+}
+
+.slides_icon {
+	background:url(../img/icon_slides2.png) no-repeat;
+	background-size:100px 100px;
+}
+
+.fob_icon {
+	background:url(../img/icon_fob.png) no-repeat;
+	background-size:100px 100px;
+}
+
+.sgtn_icon {
+	background:url(../img/icon_styleguide_moztn.png) no-repeat;
+	background-size:100px 100px;
+}
+
+.sub-titile {
+	color: #484848;
+	margin-top: 20px
+}
+
+.mdn_icon {
+	background: url(../img/icon_mdn.png) no-repeat center top;
+	background-size: 84px 84px;
+}
+
+.mwiki_icon {
+	background: url(../img/icon_wiki.png) no-repeat center top;
+	background-size: 84px 84px;
+}
+
+.hacks_icon {
+	background: url(../img/icon_hacks.png) no-repeat center top;
+	background-size: 84px 84px;
+}
+
+.sg_icon {
+	background: url(../img/icon_styleguide.png) no-repeat center top;
+	background-size: 84px 84px;
+}
+
+
+#project-links .mdn_icon .sg_icon .hack_icon .mwiki_icon h2:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 84px;
+
+}
