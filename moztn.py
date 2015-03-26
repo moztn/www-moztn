@@ -64,7 +64,7 @@ def contact():
         flash("Error")
         return render_template('contact/index.html', form=form)
       else:
-        return render_template('contact/index.html', status=True)
+        return render_template('contact/index.html', form=form)
     elif request.method == 'GET':
         return render_template('contact/index.html', form=form)
 

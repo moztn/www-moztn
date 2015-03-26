@@ -60,8 +60,28 @@
 						<h1 class="title-shadow-box">{{ self.title()}}</h1>
 					</div>
 					<div class="container">	
-						<div class="intro intro-left">
-							<form action="" type="post" id="inquiry-form" class="inquiry-form">
+          <div class="intro intro-left">
+							{% for message in form.first_name.errors %}
+							  <div class="flash">{{ message }}</div>
+							{% endfor %}
+
+							{% for message in form.last_name.errors %}
+							  <div class="flash">{{ message }}</div>
+							{% endfor %}
+							 
+							{% for message in form.email.errors %}
+							  <div class="flash">{{ message }}</div>
+							{% endfor %}
+							 
+							{% for message in form.subject.errors %}
+							  <div class="flash">{{ message }}</div>
+							{% endfor %}
+							 
+							{% for message in form.message.errors %}
+							  <div class="flash">{{ message }}</div>
+							{% endfor %}
+							<form action="{{url_for('contact') }}" method="POST" id="inquiry-form" class="inquiry-form">
+								{{ form.hidden_tag() }}
 								<fieldset class="personal">
         							<ul>
 										<li>
