@@ -6,6 +6,7 @@ from flask import (
 
 from flask_wtf import Form, RecaptchaField
 from wtforms import TextField, TextAreaField, SubmitField, validators, ValidationError
+from flask.ext.mail import Message, Mail
 
 
 
@@ -29,8 +30,21 @@ class ContactForm(Form):
 
 
 
+mail = Mail()
+
 app = Flask(__name__)
 app.secret_key = 'test_key'
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USE_SSL'] = True
+
+#These fields needs to be filled in production
+app.config['MAIL_USERNAME'] = ''
+app.config['MAIL_PASSWORD'] = ''
+app.config['MAIL_RECIPIENTS'] = ['']
+
+mail.init_app(app)
+
 
 
 # routes
@@ -64,7 +78,17 @@ def contact():
         flash("Error")
         return render_template('contact/index.html', form=form)
       else:
-        return render_template('contact/index.html', form=form)
+        msg = Message(form.subject.data, sender=app.config['MAIL_USERNAME'],
+            recipients=app.config['MAIL_RECIPIENTS'])
+        msg.body = """
+          From: {0} <{1}>
+          {2}
+          """.format(form.first_name.data + " " + form.last_name.data,
+          form.email.data, form.message.data)
+
+        mail.send(msg)
+
+        return render_template('contact/index.html', form=form, sent=True)
     elif request.method == 'GET':
         return render_template('contact/index.html', form=form)
 
