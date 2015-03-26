@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block title %}Chat Mozilla Tunisia{% endblock %}
+
+{% block style %}
+
+
+    <!--[if lte IE 8]>
+    <script src="//mozorg.cdn.mozilla.net/media/js/libs/html5shiv.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/responsive-min.css') }}">
+    <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/home2.css') }}">
+    <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/home-min.css') }}">
+
+
+<!--[if IE 9]>
+  <link rel="stylesheet" media="screen,projection,tv" href="//mozorg.cdn.mozilla.net/media/css/home-ie9-min.css?build=c6d3fcc" />
+<![endif]-->
+<!--[if IE 8]>
+  <link rel="stylesheet" media="screen,projection,tv" href="//mozorg.cdn.mozilla.net/media/css/home-ie8-min.css?build=c6d3fcc" />
+<![endif]-->
+<!--[if lt IE 8]>
+  <link rel="stylesheet" media="screen,projection,tv" href="//mozorg.cdn.mozilla.net/media/css/home-ie-min.css?build=c6d3fcc" />
+<![endif]-->
+
+{% endblock %}
+
+{% block javascript %}
+    <script id="undefined" src="{{ url_for('static', filename='home/js/inpage_linkid.js') }}" async="" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='home/js/site-min.js') }}"></script>
+    {% endblock %}
+</head>
+
+<body id="home" class="html-ltr sand lang-fr wide">
+	<div id="strings" data-global-close="Fermer" data-news-next="Article suivant" data-news-prev="Article précédent">
+	</div>
+
+	<div id="outer-wrapper">
+		<div id="wrapper">
+    {% block main_content %}
+			<main id="main-content" role="main">
+				<header class="mission">
+					<img id="logo" src="{{ url_for('static', filename='common/img/logo.png') }}">
+					<h1>
+						<img class="mz" src="{{ url_for('static', filename='common/img/mozilla-wordmark-red.png') }}" data-src="//mozorg.cdn.mozilla.net/media/img/home/mozilla-wordmark-red.png" data-high-res="true" alt="Mozilla" height="70" width="258">
+						Tunisia
+					</h1>
+					<p class="tagline">
+						Un Web plus juste, c'est dans nos co{r}des
+					</p>
+					<p class="engage">
+						<a href="http://www.mozilla.org/fr/contribute/" class="button go">Contribuer</a>
+					</p>
+				</header>
+				
+				<section class="extra">
+					<div class="container ">
+						<h1 class="title-shadow-box">{{ self.title()}}</h1>
+					</div>
+					<div class="container">
+
+          <object width="900" height="700" data="http://webchat.mozilla-tunisia.org:9090/?channels=#mozillatunisia">
+            <embed src="http://webchat.mozilla-tunisia.org:9090/?channels=#mozillatunisia">
+            </embed>
+          </object>
+
+				</section>
+			</main>
+    {% endblock %}
+		</div>
+		<!-- close #wrapper -->
+	</div>
+	<!-- close #outer-wrapper -->
+{% block last_load_javascript %}
+	<!--[if IE 9]>
+	      <script src="//mozorg.cdn.mozilla.net/media/js/libs/matchMedia.js"></script>
+	    <![endif]-->
+	<script src="{{ url_for('static', filename='home/js/mozorg-resp-min.js') }}"></script>
+	<!--[if gt IE 7]> <!-- -->
+	<script src="{{ url_for('static', filename='home/js/home-min.js') }}"></script>
+	<!-- <![endif]-->
+	<div class="crossrider-nofity-14917" index="0">	</div>
+	<div class="crossrider-nofity-14917-top-left">	</div>
+	<div class="crossrider-nofity-14917-top-right">	</div>
+	<div class="crossrider-nofity-14917-bottom-left"> </div>
+	<div class="crossrider-nofity-14917-bottom-right"></div>
+{% endblock %}
+</body>
+
+</html>

@@ -92,6 +92,10 @@ def contact():
     elif request.method == 'GET':
         return render_template('contact/index.html', form=form)
 
+@app.route('/IRC')
+def irc():
+    return render_template('irc/index.html')
+
 
 @app.errorhandler(404)
 def blog_redirection(e):
