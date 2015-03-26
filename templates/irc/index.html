@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block title %}Contactez-nous{% endblock %}
+{% block title %}Chat Mozilla Tunisia{% endblock %}
 
 {% block style %}
 
@@ -12,7 +12,6 @@
     <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/responsive-min.css') }}">
     <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/home2.css') }}">
     <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/home-min.css') }}">
-    <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='contact/contact.css') }}">
 
 
 <!--[if IE 9]>
@@ -56,68 +55,16 @@
 				</header>
 				
 				<section class="extra">
-					<div class="container">
+					<div class="container ">
 						<h1 class="title-shadow-box">{{ self.title()}}</h1>
 					</div>
-					<div class="container">	
-          <div class="intro intro-left">
-              {% if sent %}
-                <div> Message envoyé, on va vous contacter bientôt :) </div>
-              {% endif %}
-							{% for message in form.first_name.errors %}
-							  <div class="flash">{{ message }}</div>
-							{% endfor %}
+					<div class="container">
 
-							{% for message in form.last_name.errors %}
-							  <div class="flash">{{ message }}</div>
-							{% endfor %}
-							 
-							{% for message in form.email.errors %}
-							  <div class="flash">{{ message }}</div>
-							{% endfor %}
-							 
-							{% for message in form.subject.errors %}
-							  <div class="flash">{{ message }}</div>
-							{% endfor %}
-							 
-							{% for message in form.message.errors %}
-							  <div class="flash">{{ message }}</div>
-							{% endfor %}
-							<form action="{{url_for('contact') }}" method="POST" id="inquiry-form" class="inquiry-form">
-								{{ form.hidden_tag() }}
-								<fieldset class="personal">
-        							<ul>
-										<li>
-											<label for="person-name">Nom</label>
-											<input type="text" required="required" name="last_name" id="last_name">
-										</li>
-										<li>
-											<label for="person-name">Prénom</label>
-											<input type="text" required="required" name="first_name" id="first_name">
-										</li>
-										<li>
-											<label for="person-email">Sujet</label>
-											<input type="text" required="required" name="subject" id="subject">
-										</li>
-										<li>
-											<label for="person-email">Email</label>
-											<input type="email" required="required" name="email" id="email">
-										</li>
-          
-										<li class="form-message">
-											<label for="person-message">Message</label>
-										<textarea name="message" rows="4" cols="60" id="person-message"></textarea>
-										</li>
-          
-        							</ul>
-      							</fieldset>
-								<fieldset class="submit">
-        							<button type="submit" class="button" name="submit">Envoyer</button>
-      							</fieldset>
-							</form>
-						</div>
-					</div>
-					
+          <object width="900" height="700" data="http://webchat.mozilla-tunisia.org:9090/?channels=#mozillatunisia">
+            <embed src="http://webchat.mozilla-tunisia.org:9090/?channels=#mozillatunisia">
+            </embed>
+          </object>
+
 				</section>
 			</main>
     {% endblock %}
