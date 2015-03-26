@@ -83,7 +83,11 @@
 							{% for message in form.message.errors %}
 							  <div class="flash">{{ message }}</div>
 							{% endfor %}
-							<form action="{{url_for('contact') }}" method="POST" id="inquiry-form" class="inquiry-form">
+
+							{% for message in form.recaptcha.errors %}
+							  <div class="flash">{{ message }}</div>
+							{% endfor %}
+								<form action="{{url_for('contact') }}" method="POST" id="inquiry-form" class="inquiry-form">
 								{{ form.hidden_tag() }}
 								<fieldset class="personal">
         							<ul>
@@ -108,6 +112,9 @@
 											<label for="person-message">Message</label>
 										<textarea name="message" rows="4" cols="60" id="person-message"></textarea>
 										</li>
+                    <li>
+                      {{ form.recaptcha }}
+                    </li>
           
         							</ul>
       							</fieldset>

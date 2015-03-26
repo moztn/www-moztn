@@ -27,6 +27,10 @@ class ContactForm(Form):
       [validators.Required("Veuillez entrer votre message.")])
   submit = SubmitField("Envoyer")
 
+  recaptcha = RecaptchaField('Captcha',
+      [validators.Required('Veuillez entrez le recaptcha')])
+
+
 
 
 
@@ -43,8 +47,11 @@ app.config['MAIL_USERNAME'] = ''
 app.config['MAIL_PASSWORD'] = ''
 app.config['MAIL_RECIPIENTS'] = ['']
 
-mail.init_app(app)
+app.config['RECAPTCHA_PRIVATE_KEY'] = ''
+app.config['RECAPTCHA_PUBLIC_KEY'] = ''
 
+
+mail.init_app(app)
 
 
 # routes
