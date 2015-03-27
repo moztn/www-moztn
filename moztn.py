@@ -27,8 +27,7 @@ class ContactForm(Form):
       [validators.Required("Veuillez entrer votre message.")])
   submit = SubmitField("Envoyer")
 
-  recaptcha = RecaptchaField('Captcha',
-      [validators.Required('Veuillez entrez le recaptcha')])
+  recaptcha = RecaptchaField()
 
 
 

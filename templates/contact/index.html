@@ -84,9 +84,9 @@
 							  <div class="flash">{{ message }}</div>
 							{% endfor %}
 
-							{% for message in form.recaptcha.errors %}
-							  <div class="flash">{{ message }}</div>
-							{% endfor %}
+							{% if form.recaptcha.errors|length > 0 %}
+							  <div class="flash">Il faut vérifier que vous n'êtes pas un robot !</div>
+							{% endif %}
 								<form action="{{url_for('contact') }}" method="POST" id="inquiry-form" class="inquiry-form">
 								{{ form.hidden_tag() }}
 								<fieldset class="personal">
