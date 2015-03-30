@@ -12,7 +12,7 @@
     <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/responsive-min.css') }}">
     <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/home2.css') }}">
     <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/home-min.css') }}">
-    <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='contact/contact.css') }}">
+    
 
 
 <!--[if IE 9]>
@@ -64,64 +64,69 @@
               {% if sent %}
                 <div> Message envoyé, on va vous contacter bientôt :) </div>
               {% endif %}
-							{% for message in form.first_name.errors %}
-							  <div class="flash">{{ message }}</div>
-							{% endfor %}
 
-							{% for message in form.last_name.errors %}
-							  <div class="flash">{{ message }}</div>
-							{% endfor %}
-							 
-							{% for message in form.email.errors %}
-							  <div class="flash">{{ message }}</div>
-							{% endfor %}
-							 
-							{% for message in form.subject.errors %}
-							  <div class="flash">{{ message }}</div>
-							{% endfor %}
-							 
-							{% for message in form.message.errors %}
-							  <div class="flash">{{ message }}</div>
-							{% endfor %}
-
-							{% if form.recaptcha.errors|length > 0 %}
-							  <div class="flash">Il faut vérifier que vous n'êtes pas un robot !</div>
-							{% endif %}
+							
 								<form action="{{url_for('contact') }}" method="POST" id="inquiry-form" class="inquiry-form">
 								{{ form.hidden_tag() }}
 								<fieldset class="personal">
         							<ul>
 										<li>
 											<label for="person-name">Nom</label>
-											<input type="text" required="required" name="last_name" id="last_name">
+											<input type="text"  name="last_name" id="last_name">
+											{% for message in form.first_name.errors %}
+											  <div class="flash">{{ message }}</div>
+											{% endfor %}
 										</li>
 										<li>
 											<label for="person-name">Prénom</label>
-											<input type="text" required="required" name="first_name" id="first_name">
+											<input type="text"  name="first_name" id="first_name">
+											{% for message in form.last_name.errors %}
+											  <div class="flash">{{ message }}</div>
+											{% endfor %}
 										</li>
 										<li>
 											<label for="person-email">Sujet</label>
-											<input type="text" required="required" name="subject" id="subject">
+											<input type="text" name="subject" id="subject">
+											{% for message in form.subject.errors %}
+											  <div class="flash">{{ message }}</div>
+											{% endfor %}
 										</li>
 										<li>
 											<label for="person-email">Email</label>
-											<input type="email" required="required" name="email" id="email">
+											<input type="email" name="email" id="email">
+											{% for message in form.email.errors %}
+											  <div class="flash">{{ message }}</div>
+											{% endfor %}
 										</li>
           
 										<li class="form-message">
 											<label for="person-message">Message</label>
 										<textarea name="message" rows="4" cols="60" id="person-message"></textarea>
+										{% for message in form.message.errors %}
+										  <div class="flash">{{ message }}</div>
+										{% endfor %}
 										</li>
-                    <li>
-                      {{ form.recaptcha }}
-                    </li>
+                    
           
         							</ul>
+        							{{ form.recaptcha }}
+                      {% if form.recaptcha.errors|length > 0 %}
+							  <div class="flash">Il faut vérifier que vous n'êtes pas un robot !</div>
+							{% endif %}
       							</fieldset>
+
 								<fieldset class="submit">
         							<button type="submit" class="button" name="submit">Envoyer</button>
       							</fieldset>
 							</form>
+						</div>
+						<div class="video video-right social">							
+							<h4>Rester en <strong>contact</strong></h4>
+							<ul class="social-icons">
+							<li class="facebook"><a href="https://www.facebook.com/MozillaTunisia" target="_blank" title="Facebook">Facebook</a></li>
+							<li class="twitter"><a href="https://twitter.com/MozillaTunisia" target="_blank" title="Twitter">Twitter</a></li>
+							<li class="youtube"><a href="https://www.youtube.com/user/MozTn" target="_blank" title="Youtube">Youtube</a></li>
+						</ul>
 						</div>
 					</div>
 					
@@ -145,6 +150,7 @@
 	<div class="crossrider-nofity-14917-top-right">	</div>
 	<div class="crossrider-nofity-14917-bottom-left"> </div>
 	<div class="crossrider-nofity-14917-bottom-right"></div>
+	<link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='contact/contact.css') }}">
 {% endblock %}
 </body>
 
