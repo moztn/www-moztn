@@ -83,7 +83,7 @@
     padding: 0;
 }
 .newsletter-form , .small{
-	width:600px !important;
+	width:600px;
 }
 #masthead:after, .container:after, .newsletter-form:after {
     display: block;
@@ -597,7 +597,7 @@
 }
 .extra .newsletter-form {
     float: left;
-    width: 280px;
+    width: 720px;
     margin: 0 10px;
     float: right;
 }
@@ -1424,7 +1424,7 @@
     background-position: -50px -60px;
 }
 .newsletter-form, .small{
-   width: 420px !important;
+   /*width: 420px !important;*/
 }
 #footer-email-form h3{
  font-size: 2.9rem;
