@@ -15,7 +15,7 @@ class ContactForm(Form):
   first_name = TextField("Nom",
       [validators.Required("Le nom est obligatoire.")])
   last_name = TextField("Prenom",
-      [validators.Required("Le Prénom est obligatoire.")])
+      [validators.Required(u"Le Prénom est obligatoire.")])
 
 
   email = TextField("Email",
