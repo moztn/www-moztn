@@ -150,6 +150,11 @@
 	background-size:100px 100px;
 }
 
+.proj_icon {
+	background:url(../img/icon_projects.png) no-repeat;
+	background-size:100px 100px;
+}
+
 .sub-titile {
 	color: #484848;
 	margin-top: 20px
@@ -236,6 +241,9 @@
 
 @media only screen and (min-width:320px) and (max-width:480px) {
 	
+	.featured-event, .event-detail, h2{
+		text-align: center;
+	}
 	.res_icon {
 	width:50%;
 	height:100px;
@@ -247,7 +255,6 @@
 	margin: 0 auto;
 	padding: 0;
 	width: 100%;
-	
 	}
 
 }
