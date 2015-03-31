@@ -1,0 +1,246 @@
+{% extends "layout.html" %}
+
+{% block title %}Chat Mozilla Tunisia{% endblock %}
+
+{% block style %}
+
+
+    <!--[if lte IE 8]>
+    <script src="//mozorg.cdn.mozilla.net/media/js/libs/html5shiv.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/responsive-min.css') }}">
+    <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/home2.css') }}">
+    <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='home/css/home-min.css') }}">
+    <link rel="stylesheet" media="screen,projection,tv" href="{{ url_for('static', filename='contribute/css/contribute.css') }}">
+
+
+<!--[if IE 9]>
+  <link rel="stylesheet" media="screen,projection,tv" href="//mozorg.cdn.mozilla.net/media/css/home-ie9-min.css?build=c6d3fcc" />
+<![endif]-->
+<!--[if IE 8]>
+  <link rel="stylesheet" media="screen,projection,tv" href="//mozorg.cdn.mozilla.net/media/css/home-ie8-min.css?build=c6d3fcc" />
+<![endif]-->
+<!--[if lt IE 8]>
+  <link rel="stylesheet" media="screen,projection,tv" href="//mozorg.cdn.mozilla.net/media/css/home-ie-min.css?build=c6d3fcc" />
+<![endif]-->
+
+{% endblock %}
+
+{% block javascript %}
+    <script id="undefined" src="{{ url_for('static', filename='home/js/inpage_linkid.js') }}" async="" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='home/js/site-min.js') }}"></script>
+    {% endblock %}
+</head>
+
+<body id="home" class="html-ltr sand lang-fr wide">
+	<div id="strings" data-global-close="Fermer" data-news-next="Article suivant" data-news-prev="Article précédent">
+	</div>
+
+	<div id="outer-wrapper">
+		<div id="wrapper">
+    {% block main_content %}
+			<main id="main-content" role="main">
+				<header class="mission">
+					<img id="logo" src="{{ url_for('static', filename='common/img/logo.png') }}">
+					<h1>
+						<img class="mz" src="{{ url_for('static', filename='common/img/mozilla-wordmark-red.png') }}" data-src="//mozorg.cdn.mozilla.net/media/img/home/mozilla-wordmark-red.png" data-high-res="true" alt="Mozilla" height="70" width="258">
+						Tunisia
+					</h1>
+					<p class="tagline">
+						Un Web plus juste, c'est dans nos co{r}des
+					</p>
+					<p class="engage">
+						<a href="http://www.mozilla.org/fr/contribute/" class="button go">Contribuer</a>
+					</p>
+				</header>
+				
+				<section class="extra">
+					<div class="container ">
+						<h1 class="title-shadow-box">{{ self.title()}}</h1>
+					</div>
+					<div class="container">
+					    <h1 class="page-title">Venez rejoindre le bon coté de la force et laisser votre empreinte pour un web ouvert à tous.</h1>
+					    <!-- <p class="section-tagline">Vous voulez vous impliquer? Voici comment.</p> -->
+			        </div>
+
+				</section>
+				<section class="section landing-howto" id="landing-howto">
+				    <div class="container">
+				      <h2 class="section-title">Vous voulez vous impliquer? Voici comment.</h2>
+				      <ol class="steps">
+				        <li class="step1">Choisissez ce qui vous intéresse dans les domaines de contributions proposés</li>
+				        <li class="step2">Inscrivez-vous à join.mozilla-tunisia.org et créez votre compte</li>
+				        <li class="step3">Bienvenue dans la communauté Mozilla Tunisia</li>
+				      </ol>
+				      <!-- <p class="cta"><a data-label="Get started" data-position="CTA button click - landing bottom" href="/en-US/contribute/signup/">Get started</a></p> -->
+				    </div>
+				</section>
+				<header class="page-head">
+				  	<div class="container">
+				    	<h1 class="page-title">Dites-nous d'abord ce qui vous intéresse.</h1>
+				    	<p class="section-tagline">Faites vous plaisir et contriibuez à votre rythme dans l'un de nos projets. Visitez la liste des domaines de contribution et faites vous votre idée.</p>
+				  	</div>
+				</header>
+				<section class="section inquiry">
+    				<div class="container">
+            			<form action="" method="post" id="inquiry-form" class="inquiry-form">
+      						<fieldset class="categories">
+        						<ul class="option-list">
+                      				<li class="option">
+              							<label class="category-coding">
+							                <input type="radio" value="coding" required="required" name="category">
+							                <span class="label-text">Coding</span>
+							                <a href="#info-coding" class="info">More about coding</a>
+              							</label>
+            						</li>
+                      				<li class="option">
+              							<label class="category-testing">
+							                <input type="radio" value="testing" required="required" name="category">
+							                <span class="label-text">Testing</span>
+							                <a href="#info-testing" class="info">More about testing</a>
+              							</label>
+            						</li>
+                      				<li class="option">
+              							<label class="category-writing">
+							                <input type="radio" value="writing" required="required" name="category">
+							                <span class="label-text">Writing</span>
+							                <a href="#info-writing" class="info">More about writing</a>
+              							</label>
+            						</li>
+                      				<li class="option">
+              							<label class="category-teaching">
+                							<input type="radio" value="teaching" required="required" name="category">
+							                <span class="label-text">Teaching</span>
+							                <a href="#info-teaching" class="info">More about teaching</a>
+              							</label>
+            						</li>
+                      				<li class="option">
+	              						<label class="category-helping">
+							                <input type="radio" value="helping" required="required" name="category">
+							                <span class="label-text">Helping</span>
+							                <a href="#info-helping" class="info">More about helping</a>
+	              						</label>
+            						</li>
+                      				<li class="option">
+              							<label class="category-translating">
+							                <input type="radio" value="translating" required="required" name="category">
+							                <span class="label-text">Translating</span>
+							                <a href="#info-translating" class="info">More about translating</a>
+              							</label>
+            						</li>
+                      				<li class="option">
+              							<label class="category-activism">
+							                <input type="radio" value="activism" required="required" name="category">
+							                <span class="label-text">Activism</span>
+							                <a href="#info-activism" class="info">More about activism</a>
+              							</label>
+            						</li>
+                      				<li class="option">
+              							<label class="category-dontknow">
+							                <input type="radio" value="dontknow" required="required" name="category">
+							                <span class="label-text">I don’t know</span>
+							                <a href="#info-dontknow" class="info">More about how you can contribute</a>
+              							</label>
+            						</li>
+                  				</ul>
+      						</fieldset>
+      						<header class="page-head">
+							  	<div class="container">
+							    	<h1 class="page-title">Prêt à contribuer ?</h1>
+							    	<p class="section-tagline">Venez partager et affiner vos connaissances avec nous, on n'attend plus que vous! Rejoignez nous et devenez membre.</p>
+							  	</div>
+							</header>
+      						<fieldset class="submit">
+
+        						<button type="submit">REJOINDRE MOZILLA TUNISIA</button>
+      						</fieldset>
+    					</form>
+
+    					<aside class="category-info">
+      						<h2>Where would you like to get started?</h2>
+      						<div id="info-coding" class="info-content">
+        						<h3>Coding</h3>
+        						<p>Contribuer pour toute une gamme de produits Mozilla, y compris Firefox et Firefox OS.</p>
+      						</div>
+					      	<div id="info-testing" class="info-content">
+					        	<h3>Testing</h3>
+					        	<p>Aider à rendre les produits Mozilla que vous utilisez encore mieux.</p>
+					      	</div>
+      						<div id="info-writing" class="info-content">
+        						<h3>Writing</h3>
+        						<p>Prêtez votre voix à Mozilla - à partir des blogs et les réseaux sociaux à fournir des documents techniques pour les utilisateurs et les développeurs.</p>
+      						</div>
+
+      						<div id="info-teaching" class="info-content">
+        						<h3>Teaching</h3>
+        						<p>Partagez vos compétences avec une communauté qui est soif d'apprendre. Profitez de nos outils gratuits, des ressources pédagogiques et des événements.</p>
+      						</div>
+
+      						<div id="info-helping" class="info-content">
+        						<h3>Helping</h3>
+        						<p>Provide support to users who need it and help everyone get the most out of their Mozilla products.</p>
+      						</div>
+
+      						<div id="info-translating" class="info-content">
+        						<h3>Translating</h3>
+        						<p>Help make Mozilla stuff available in other languages. Translate everything from newsletters and websites to copy for Firefox and Firefox OS.</p>
+      						</div>
+
+      						<div id="info-activism" class="info-content">
+        						<h3>Activism</h3>
+        						<p>Get involved with our opportunities to support freedom, security and privacy on the open Web.</p>
+      						</div>
+
+      						<div id="info-dontknow" class="info-content">
+        						<h3>I don’t know</h3>
+        						<p>Not sure how you want to help? No problem. We can find the appropriate contribution activity for you.</p>
+      						</div>
+    					</aside>
+    
+  					</div>
+				</section>
+				<section class="section landing-notready" id="landing-notready">
+				    <div class="container">
+				      <h2 class="section-title">Vous n'êtes pas encore prêt à sauter le pas?</h2>
+				      <p class="section-tagline">Voici d'autres moyens pour soutenir la communauté dès maintenant.</p>
+				      <ul class="other-actions">
+				        <li>
+				          <a data-label="Donate to Mozilla" class="other-donate" href="blog.mozilla-tunisia.org">Découvrer notre blog</a>
+				        </li>
+				        <li>
+				          <a data-label="Download Firefox" class="other-download" href="www.mozilla.org/en-US/firefox/">Télécharger Firefox</a>
+				        </li>
+				                        <li>
+				          <a data-label="Like us on Facebook" class="other-facebook" href="https://www.facebook.com/mozillatunisia">Aimez la page Facebook</a>
+				        </li>
+				        <li>
+				          <a data-label="Follow us on Twitter" class="other-twitter" href="https://twitter.com/mozillatunisia">Suivez-nous sur Twitter</a>
+				        </li>
+				      </ul>
+				    </div>
+				</section>
+			</main>
+    {% endblock %}
+		</div>
+		<!-- close #wrapper -->
+	</div>
+	<!-- close #outer-wrapper -->
+{% block last_load_javascript %}
+	<!--[if IE 9]>
+	      <script src="//mozorg.cdn.mozilla.net/media/js/libs/matchMedia.js"></script>
+	    <![endif]-->
+	<script src="{{ url_for('static', filename='home/js/mozorg-resp-min.js') }}"></script>
+	<!--[if gt IE 7]> <!-- -->
+	<script src="{{ url_for('static', filename='home/js/home-min.js') }}"></script>
+	<script src="{{ url_for('static', filename='contribute/js/contribute.js') }}"></script>
+	<!-- <![endif]-->
+	<div class="crossrider-nofity-14917" index="0">	</div>
+	<div class="crossrider-nofity-14917-top-left">	</div>
+	<div class="crossrider-nofity-14917-top-right">	</div>
+	<div class="crossrider-nofity-14917-bottom-left"> </div>
+	<div class="crossrider-nofity-14917-bottom-right"></div>
+{% endblock %}
+</body>
+
+</html>
