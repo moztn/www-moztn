@@ -1,3 +1,4 @@
+
 #project-links ul {
 	position: relative;
 	list-style-type: none;
@@ -17,7 +18,7 @@
 	float: left;
 	margin: 0;
 	padding: 0;
-	width: 25%;
+	width: 24%;
 }
 #project-links h2 {
 	position: relative;
@@ -94,7 +95,7 @@
 	font-family: "Open Sans", X-LocaleSpecific, sans-serif;
 	font-size: 93px;
 	color: white;
-	//font-weight: bold;
+	font-weight: bold;
 
 }
 .container .inner-container{
@@ -108,12 +109,12 @@
 	width:100%;
 }
 .featured-event, .event-detail, h4{
-	float: left;
+	
 }
 .event-detail, .event-info{
 	margin-left:3px;
-	width: 78%;
-	text-align: -moz-left;
+	width: 100%;
+	text-align: left;
 }
 .res_icon {
 	width:150px;
@@ -146,6 +147,11 @@
 
 .sgtn_icon {
 	background:url(../img/icon_styleguide_moztn.png) no-repeat;
+	background-size:100px 100px;
+}
+
+.proj_icon {
+	background:url(../img/icon_projects.png) no-repeat;
 	background-size:100px 100px;
 }
 
@@ -182,5 +188,78 @@
 	content: '';
 	width: 100%;
 	height: 84px;
+
+}
+
+
+@media all and (min-width:760px) and (max-width:1000px) {
+    #project-links ul li {
+	float: left;
+	margin: 5px;
+	padding: 0;
+	width: 23%;
+	
+	}
+
+	.hacks_icon {
+	background: url(../img/icon_hacks.png) no-repeat center top;
+	background-size: 75px 75px;
+	}
+
+	.mdn_icon {
+	background: url(../img/icon_mdn.png) no-repeat center top;
+	background-size: 75px 75px;
+	}
+
+	.mwiki_icon {
+	background: url(../img/icon_wiki.png) no-repeat center top;
+	background-size: 75px 75px;
+	}
+
+	.sg_icon {
+	background: url(../img/icon_styleguide.png) no-repeat center top;
+	background-size: 65px 70px;
+	}
+}
+
+@media only screen and (min-width:480px) and (max-width:760px) {
+    .res_icon {
+    width: 110px;
+    height: 120px;
+    text-align: center;
+    margin-top: 20px;
+    }
+
+	#project-links ul li {
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	
+	}
+
+}
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+	
+	.featured-event, .event-detail, h2{
+		text-align: center;
+	}
+	/*
+	.res_icon {
+	width:50%;
+	height:100px;
+	text-align: center;
+	margin-left:32%;
+	}	*/
+
+	.res_icon {
+	display: none;
+	}	
+
+	#project-links ul li {
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	}
 
 }
