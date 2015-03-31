@@ -244,11 +244,16 @@
 	.featured-event, .event-detail, h2{
 		text-align: center;
 	}
+	/*
 	.res_icon {
 	width:50%;
 	height:100px;
 	text-align: center;
 	margin-left:32%;
+	}	*/
+
+	.res_icon {
+	display: none;
 	}	
 
 	#project-links ul li {
