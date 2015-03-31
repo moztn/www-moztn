@@ -95,7 +95,7 @@
 	font-family: "Open Sans", X-LocaleSpecific, sans-serif;
 	font-size: 93px;
 	color: white;
-	//font-weight: bold;
+	font-weight: bold;
 
 }
 .container .inner-container{
@@ -109,12 +109,12 @@
 	width:100%;
 }
 .featured-event, .event-detail, h4{
-	float: left;
+	
 }
 .event-detail, .event-info{
 	margin-left:3px;
-	width: 78%;
-	text-align: -moz-left;
+	width: 100%;
+	text-align: left;
 }
 .res_icon {
 	width:150px;
@@ -219,11 +219,11 @@
 
 @media only screen and (min-width:480px) and (max-width:760px) {
     .res_icon {
-	width:150px;
-	height:150px;
-	text-align: center;
-	margin:10 10 10 10;
-	}	
+    width: 110px;
+    height: 120px;
+    text-align: center;
+    margin-top: 20px;
+    }
 
 	#project-links ul li {
 	margin: 0 auto;
@@ -237,10 +237,10 @@
 @media only screen and (min-width:320px) and (max-width:480px) {
 	
 	.res_icon {
-	width:150px;
-	height:150px;
+	width:50%;
+	height:100px;
 	text-align: center;
-	margin:10 10 10 10;
+	margin-left:32%;
 	}	
 
 	#project-links ul li {
