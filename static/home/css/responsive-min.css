@@ -1996,10 +1996,55 @@ nav.menu-bar ul li:first-child a {
 #contribute #nav-main-menu .contribute-item>a {
     background-color: #eee;
 }
-}@media only screen and (min-width:480px) and (max-width:760px) {
+}
+@media all and (min-width:320px) and (max-width:480px) {
+   
+    #colophon .footer-lang {
+    float: none;
+    width: 140px;
+    margin: 0 auto;
+    }
+
+    #colophon .footer-license{
+    text-align: center;
+    width: 240px;
+    margin: 0 auto;
+    }
+}
+@media all and (min-width:1000px) {
+   
+    #colophon .footer-lang {
+    width: 140px;
+    margin: -40px 25px;
+    float: right;
+    }
+
+    #colophon .footer-license{
+    text-align: center;
+    margin: 0px auto;
+    float: none;
+    width: 350px;
+    }
+}
+@media only screen and (min-width:480px) and (max-width:760px) {
     #wrapper {
     width: 440px;
 }
+/* footer tweak*/
+#colophon .footer-license{
+    float: left;
+    text-align: center;
+    width: 220px;
+    margin: 0 10px;
+}
+
+#colophon .footer-lang {
+    
+    width: 150px;
+    margin: 0 auto;
+}
+
+
 #masthead, #main-feature, #main-content, .billboard, .container, .main-column, .sidebar {
     width: auto;
 }

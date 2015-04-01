@@ -61,7 +61,7 @@ def home():
 
 @app.route('/contribute')
 def contribute():
-    return 'Please contribute to this page not yet done :('
+    return render_template('contribute/index.html')
 
 @app.route('/resources')
 def resources():
