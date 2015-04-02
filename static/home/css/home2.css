@@ -51,7 +51,8 @@
   #colophon .footer-nav {
     float: left;
     width: 100px;
-    margin: 0 10px; } }
+    margin: 0 10px; }
+ }
 @media only screen and (max-width:760px) {
   #wrapper {
     width: 320px; }
