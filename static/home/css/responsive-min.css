@@ -1681,6 +1681,9 @@ nav.menu-bar ol li:first-child a, nav.menu-bar ul li:first-child a {
 #colophon .footer-logo, #colophon .footer-license, #colophon .footer-nav {
     margin: 0 10px;
 }
+#logo-footer{
+    width: 180px;
+}
 #colophon .footer-logo, #colophon .footer-nav {
     float: left;
     width: 140px;
@@ -2084,3 +2087,81 @@ nav.menu-bar ul li:first-child a {
     margin: 15px;
 }
 
+
+
+
+#colophon .col {
+     float: left;
+     margin: 0px 10px;
+     width: 300px;
+}
+
+#colophon .col > :last-child {
+     margin-bottom: 0px;
+}
+
+#colophon .col-2 ul {
+     overflow: hidden;
+}
+
+#colophon .col-2 ul li {
+     float: left;
+}
+
+#colophon .col-2 ul li.wrap::before {
+     content: " · ";
+}
+
+#colophon .col-2 ul li.clear {
+     clear: both;
+}
+
+#colophon .links-social li ul {
+     display: inline;
+     margin: 0px;
+}
+
+#colophon .links-social li li {
+     display: inline;
+}
+
+#colophon .links-social li li::before {
+     content: "· ";
+}
+
+#colophon .links-social li li:first-child::before {
+     content: "";
+}
+
+#colophon .links-social li li span {
+     border: 0px none;
+     clip: rect(0px, 0px, 0px, 0px);
+     height: 1px;
+     margin: -1px;
+     overflow: hidden;
+     padding: 0px;
+     position: absolute ! important;
+     width: 1px;
+}
+
+.html-rtl #colophon .col, .html-rtl #colophon .col-2 ul li {
+     float: right;
+}
+.col.col-2 {
+    width: 350px !important;
+    font-size: 1.15em !important;
+}
+.col.col-1 {
+    width: 250px !important;
+}
+.col.col-3 {
+    text-align: right;
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1000px) {
+  #colophon .row { width: 720px; }
+  #colophon .col-1 { float: none; width: auto; margin: 0px 10px 20px; overflow: hidden; }
+  #colophon .col-2, #colophon .col-3 { float: left; width: 340px; margin: 0px 10px; }
+  #colophon .logo { float: left; margin-bottom: 0px; width: 120px; }
+  #colophon .license { margin: 0px 0px 0px 120px; }
+}
