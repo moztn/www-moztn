@@ -2001,7 +2001,7 @@ nav.menu-bar ul li:first-child a {
    
     #colophon .footer-lang {
     float: none;
-    width: 140px;
+    width: 180px;
     margin: 0 auto;
     }
 
@@ -2014,7 +2014,7 @@ nav.menu-bar ul li:first-child a {
 @media all and (min-width:1000px) {
    
     #colophon .footer-lang {
-    width: 140px;
+    width: 180px;
     margin: -40px 25px;
     float: right;
     }
@@ -2040,7 +2040,7 @@ nav.menu-bar ul li:first-child a {
 
 #colophon .footer-lang {
     
-    width: 150px;
+    width: 180px;
     margin: 0 auto;
 }
 
