@@ -1,4 +1,6 @@
-
+a{
+    outline: none !important;
+}
 #main-content .intro {
     clear: left;
     /*float: left;*/
