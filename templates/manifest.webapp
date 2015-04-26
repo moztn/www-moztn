@@ -1,0 +1,14 @@
+{
+  "version": "0.1.0",
+  "name": "Mozilla Tunisia",
+  "description": "Mozilla Tunisia Home Page",
+  "launch_path": "{{ url_for('home') }}",
+  "icons": {
+    "128": "{{ url_for('static', filename='webapp/icons/moztn-128.png') }}",
+    "64": "{{ url_for('static', filename='webapp/icons/moztn-64.png') }}"
+  },
+  "developer": {
+    "name": "Mozilla Tunisia Dev-team",
+    "url": "http://mozilla-tunisia.org"
+  }
+}

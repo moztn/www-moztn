@@ -1,7 +1,7 @@
 # coding: utf-8
 from flask import (
     Flask, url_for, render_template, session, redirect, escape, request,
-    flash, redirect, current_app
+    flash, redirect, current_app, Response
 )
 
 from flask_wtf import Form, RecaptchaField
@@ -134,6 +134,10 @@ def contact():
 def irc():
     return render_template('irc/index.html')
 
+
+@app.route('/manifest.webapp')
+def webapp():
+    return Response(render_template('manifest.webapp'), mimetype='application/x-web-app-manifest+json')
 
 @app.errorhandler(404)
 def blog_redirection(e):
