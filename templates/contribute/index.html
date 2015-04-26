@@ -139,18 +139,25 @@
                   				</ul>
       						</fieldset>
       						<!-- Moved by Melek and Sofien : No need for this section now -->
-      						<!--
-      						<header class="page-head">
+      					<!--	<header class="page-head"> 
 							  	<div class="container">
 							    	<h1 class="page-title">Prêt à contribuer ?</h1>
 							    	<p class="section-tagline">Venez partager et affiner vos connaissances avec nous, on n'attend plus que vous! Rejoignez nous et devenez membre.</p>
 							  	</div>
-							</header>
+							</header> -->
+                  <fieldset class="input">
+								{{ form.hidden_tag() }}
+                    <input type="email" placeholder="EMAIL" name="email"/>
+        							{{ form.recaptcha }}
+                      {% if form.recaptcha.errors|length > 0 %}
+							  <div class="flash">Il faut vérifier que vous n'êtes pas un robot !</div>
+							{% endif %}
+                  </fieldset>
+
       						<fieldset class="submit">
 
         						<button type="submit">REJOINDRE MOZILLA TUNISIA</button>
       						</fieldset>
-      						-->
     					</form>
 
     					<aside class="category-info">

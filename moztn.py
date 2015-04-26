@@ -5,7 +5,10 @@ from flask import (
 )
 
 from flask_wtf import Form, RecaptchaField
-from wtforms import TextField, TextAreaField, SubmitField, validators, ValidationError
+from wtforms import (
+     TextField, TextAreaField, SubmitField, validators, ValidationError,
+     RadioField
+)
 from flask.ext.mail import Message, Mail
 
 
@@ -30,6 +33,21 @@ class ContactForm(Form):
   recaptcha = RecaptchaField()
 
 
+
+class ContributeForm(Form):
+
+  category = RadioField("Category",
+      [validators.Required()],
+      choices=[('coding', 'coding'), ('testing','testing'), 
+      ('writing','writing'), ('teaching','teaching'),
+      ('translating', 'translating'), ('activism', 'activism'),
+      ('helping', 'helping')])
+  email = TextField("Email",
+      [validators.Required("L'adresse email est obligatoire."),
+      validators.Email("Il faut entrer une adresse email correcte")])
+  submit = SubmitField("Envoyer")
+
+  recaptcha = RecaptchaField()
 
 
 
@@ -59,9 +77,23 @@ mail.init_app(app)
 def home():
     return render_template('home/index.html')
 
-@app.route('/contribute')
+@app.route('/contribute', methods=['GET', 'POST'])
 def contribute():
-    return render_template('contribute/index.html')
+    form = ContributeForm()
+    if request.method == 'POST':
+      if form.validate() == False:
+        flash("Error")
+      else:
+        msg = Message('[' + form.category.data + '] We have a new Contributor !',
+            sender=app.config['MAIL_USERNAME'],
+            recipients=app.config['MAIL_RECIPIENTS'])
+        msg.body = """
+          From: {0}
+          Un nouveau contributeur vient de s'inscrire, dans la catégorie : **{1}**
+        """.format(form.email.data, form.category.data)
+        mail.send(msg)
+
+    return render_template('contribute/index.html', form=form)
 
 @app.route('/resources')
 def resources():
