@@ -92,9 +92,11 @@ def contribute():
             sender=app.config['MAIL_USERNAME'],
             recipients=app.config['MAIL_RECIPIENTS'])
         msg.body = """
-          From: {0}
-          Un nouveau contributeur vient de s'inscrire, dans la catégorie : **{1}**
-        """.format(form.email.data, form.category.data)
+          From: {0} <{1}>
+          Un nouveau contributeur vient de s'inscrire, dans la catégorie : **{2}**
+          Message : 
+          {3}
+        """.format(form.name.data, form.email.data, form.category.data, form.message.data)
         mail.send(msg)
 
     return render_template('contribute/index.html', form=form)
