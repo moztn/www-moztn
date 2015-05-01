@@ -2,6 +2,16 @@
 html.noscroll body {
     overflow: hidden;
 }
+.flash{
+    color: #c10000;
+    font-size: 0.9em;
+    padding: 0;
+    text-align: left;
+}
+.control-group.flash input, .control-group.flash select, .control-group.flash textarea {
+    border-color: #b94a48;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
 #modal {
     background: none repeat scroll 0 0 rgba(53, 75, 93, 0.8);
     bottom: 0;

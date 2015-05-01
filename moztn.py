@@ -42,9 +42,13 @@ class ContributeForm(Form):
       ('writing','writing'), ('teaching','teaching'),
       ('translating', 'translating'), ('activism', 'activism'),
       ('helping', 'helping')])
+  name = TextField("name",
+      [validators.Required(u"Le Nom et Prénom est obligatoire.")])
   email = TextField("Email",
       [validators.Required("L'adresse email est obligatoire."),
       validators.Email("Il faut entrer une adresse email correcte")])
+  message = TextAreaField("Message", 
+      [validators.Required("Veuillez entrer votre message.")])
   submit = SubmitField("Envoyer")
 
   recaptcha = RecaptchaField()

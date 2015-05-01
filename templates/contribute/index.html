@@ -138,6 +138,40 @@
             						</li>
                   				</ul>
       						</fieldset>
+      						<fieldset class="personal">
+								{{ form.hidden_tag() }}
+								<h2 class="section-title">Dites-Nous ce qui vous intéresse</h2>
+								<ul>
+									<li>								
+										<label for="person-name">Nom & Prénom</label>
+										<input id="id_name" type="text" name="name"/>
+										{% for message in form.name.errors %}
+										  	<div class="flash">{{ message }}</div>
+										{% endfor %}
+									</li>
+									<li>
+										<label for="person-email">Adresse Mail</label>
+										<input id="id_email" type="email" name="email"/>
+										{% for message in form.email.errors %}
+										  	<div class="flash">{{ message }}</div>
+										{% endfor %}
+									</li>
+									<li class="form-message">								
+										<label for="person-message">Pourquoi voulez-vous faire partie de Mozilla-Tunisia?</label>
+										<textarea id="person-message" cols="30" rows="4" name="message"></textarea>
+										{% for message in form.message.errors %}
+										  <div class="flash">{{ message }}</div>
+										{% endfor %}
+									</li>									
+								</ul>
+								{{ form.recaptcha }}
+                      		{% if form.recaptcha.errors|length > 0 %}
+							  <div class="flash">Il faut vérifier que vous n'êtes pas un robot !</div>
+							{% endif %}
+							</fieldset>
+							<fieldset class="submit">
+								<button type="submit">REJOINDRE MOZILLA TUNISIA</button>
+							</fieldset>
       						<!-- Moved by Melek and Sofien : No need for this section now -->
       					<!--	<header class="page-head"> 
 							  	<div class="container">
@@ -145,19 +179,7 @@
 							    	<p class="section-tagline">Venez partager et affiner vos connaissances avec nous, on n'attend plus que vous! Rejoignez nous et devenez membre.</p>
 							  	</div>
 							</header> -->
-                  <fieldset class="input">
-								{{ form.hidden_tag() }}
-                    <input type="email" placeholder="EMAIL" name="email"/>
-        							{{ form.recaptcha }}
-                      {% if form.recaptcha.errors|length > 0 %}
-							  <div class="flash">Il faut vérifier que vous n'êtes pas un robot !</div>
-							{% endif %}
-                  </fieldset>
-
-      						<fieldset class="submit">
-
-        						<button type="submit">REJOINDRE MOZILLA TUNISIA</button>
-      						</fieldset>
+                  
     					</form>
 
     					<aside class="category-info">
