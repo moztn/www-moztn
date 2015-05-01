@@ -54,7 +54,7 @@
 						<a href="http://www.mozilla.org/fr/contribute/" class="button go">Contribuer</a>
 					</p>
 				</header>
-				
+
 				<section class="extra">
 					<div class="container ">
 						<h1 class="title-shadow-box">{{ self.title()}}</h1>
@@ -138,6 +138,30 @@
             						</li>
                   				</ul>
       						</fieldset>
+           <fieldset class="personal">
+            <h2 class="section-title">Dites-Nous plus d'Information de vous</h2>
+            <ul>
+             <li>
+              <label for="person-name">Nom & Prénom</label>
+              <input id="id_name" type="text" required="required" name="name"/>
+             </li>
+             <li>
+              <label for="person-email">Adresse Mail</label>
+              <input id="id_email" type="email" required="required" name="email"/>
+             </li>
+          <li class="form-message">
+            <label for="person-message">Pourquoi voulez-vous faire partie de Mozilla-Tunisia? <i>(Optionel)</i></label>
+            <textarea id="person-message" cols="60" rows="4" name="message"></textarea>
+          </li>
+          <li class="form-agree">
+            <label for="id_privacy" class="privacy-check-label"><input id="id_privacy" name="privacy" required="required" type="checkbox" /> <span class="title"> J’accepte que Mozilla utilise mes informations conformément à <a href="/privacy/">cette politique de confidentialité</a></span></label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="submit">
+
+        <button type="submit">Envoyer</button>
+      </fieldset>
       						<!-- Moved by Melek and Sofien : No need for this section now -->
       					<!--	<header class="page-head"> 
 							  	<div class="container">
@@ -195,7 +219,7 @@
         						<p>Faites du web ouvert votre combat et aidez nous à diffuser notre culture</p>
       						</div>
     					</aside>
-    
+
   					</div>
 				</section>
 				<section class="section landing-notready" id="landing-notready">
