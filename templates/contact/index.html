@@ -42,7 +42,7 @@
     {% block main_content %}
 			<main id="main-content" role="main">
 				<header class="mission">
-					<img id="logo" src="{{ url_for('static', filename='common/img/logo.png') }}">
+					<a href="{{ url_for('home') }}"><img id="logo" src="{{ url_for('static', filename='common/img/logo.png') }}"></a>
 					<h1>
 						<img class="mz" src="{{ url_for('static', filename='common/img/mozilla-wordmark-red.png') }}" data-src="//mozorg.cdn.mozilla.net/media/img/home/mozilla-wordmark-red.png" data-high-res="true" alt="Mozilla" height="70" width="258">
 						Tunisia
