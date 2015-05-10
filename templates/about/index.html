@@ -41,7 +41,7 @@
     {% block main_content %}
 			<main id="main-content" role="main">
 				<header class="mission">
-					<a href="{{ url_for('home') }}"><img id="logo" src="{{ url_for('static', filename='common/img/logo.png') }}"></a>
+					<img id="logo" src="{{ url_for('static', filename='common/img/logo.png') }}">
 					<h1>
 						<img class="mz" src="{{ url_for('static', filename='common/img/mozilla-wordmark-red.png') }}" data-src="//mozorg.cdn.mozilla.net/media/img/home/mozilla-wordmark-red.png" data-high-res="true" alt="Mozilla" height="70" width="258">
 						Tunisia
@@ -90,11 +90,11 @@
 					</div>
 					<div class="container extra">		
 						<h2 class=""> Structure de la communauté </h2>
-						<p class="intro intro-left">Mozilla Tunisia est composée d'un <a href="http://wiki.mozilla-tunisia.org/Kernel">noyau</a> d'une dizaine de personnes et de contributeurs "voyageurs". Le noyau est composé de membres fixes qui ont presque suivi Mozilla Tunisia depuis ses débuts. Il a pour objectif de clarifier et aligner les axes de la communauté de manière annuelle et faciliter l'intégration des nouveaux venus. 
+						<p class="intro intro-right">Mozilla Tunisia est composée d'un <a href="http://wiki.mozilla-tunisia.org/Kernel">noyau</a> d'une dizaine de personnes et de contributeurs "voyageurs". Le noyau est composé de membres fixes qui ont presque suivi Mozilla Tunisia depuis ses débuts. Il a pour objectif de clarifier et aligner les axes de la communauté de manière annuelle et faciliter l'intégration des nouveaux venus. 
 Par la suite vous trouvez des contributeurs temporaires qui suivant leur disponibilité, ils participent à des événements ou des sprints de code. 
 Notre communauté est en constante évolution. L'aspect dynamique varie suivant la disponibilité et les projets sur lesquels ont travaille. 
 						</p>
-						<div class="video video-right">
+						<div class="video video-left">
 							<img class="placeholder-img" alt="kernel" src="{{ url_for('static', filename='about/img/kernel.jpg') }}">
 						</div>
 					</div>
