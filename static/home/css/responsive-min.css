@@ -999,9 +999,12 @@ a {
     color: #0096dd;
     text-decoration: none;
 }
-a:hover, a:focus, a:active {
+a:hover {
     color: #0073aa;
     text-decoration: underline;
+}
+a:focus, a:active{
+    color: #0073aa;
 }
 .sand #outer-wrapper {
     background: #f5f1e8 url("../img/bg-sand.png") repeat;
