@@ -87,6 +87,7 @@ def contribute():
     if request.method == 'POST':
       if form.validate() == False:
         flash("Error")
+        return render_template('contribute/index.html', form=form)
       else:
         msg = Message('[' + form.category.data + '] We have a new Contributor !',
             sender=app.config['MAIL_USERNAME'],
@@ -99,7 +100,9 @@ def contribute():
         """.format(form.name.data, form.email.data, form.category.data, form.message.data)
         mail.send(msg)
 
-    return render_template('contribute/index.html', form=form)
+      return render_template('contribute/index.html', form=form, sent=True)
+    elif request.method == 'GET':
+        return render_template('contribute/index.html', form=form)
 
 @app.route('/resources')
 def resources():

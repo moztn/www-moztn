@@ -54,11 +54,15 @@
 						<a href="http://www.mozilla.org/fr/contribute/" class="button go">Contribuer</a>
 					</p>
 				</header>
+
 				
 				<section class="extra">
 					<div class="container ">
 						<h1 class="title-shadow-box">{{ self.title()}}</h1>
 					</div>
+					{% if sent %}
+                <h3 class="section-title"> Message envoyé, on va vous contacter bientôt :) </h3>
+              {% endif %}
 					<div class="container">
 					    <h1 class="page-title">Venez rejoindre le bon coté de la force et laisser votre empreinte pour un web ouvert à tous</h1>
 					    <!-- <p class="section-tagline">Vous voulez vous impliquer? Voici comment.</p> -->
